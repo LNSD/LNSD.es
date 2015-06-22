@@ -6,7 +6,7 @@ build:
         tasks: build
 deploy:
   steps:
-    - gh-pages:
-        token: $GH_TOKEN
+    - lukevivier/gh-pages:
+        token: $GIT_TOKEN
         domain: lnsd.es
         basedir: build
