@@ -1,6 +1,6 @@
-# LNSD.es
+# LNSD.es [![wercker status](https://app.wercker.com/status/3d58e26cdcf1773c5e99e5cbb549b8e8/s "wercker status")](https://app.wercker.com/project/bykey/3d58e26cdcf1773c5e99e5cbb549b8e8)
 
-My internet website. [![wercker status](https://app.wercker.com/status/3d58e26cdcf1773c5e99e5cbb549b8e8/s "wercker status")](https://app.wercker.com/project/bykey/3d58e26cdcf1773c5e99e5cbb549b8e8)
+My internet website.
 
 Made with [wintersmith][1], [jade][2], [sass][3] & [coffee script][4].
 Hosted on [GitHub Pages][gh].
