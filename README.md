@@ -2,7 +2,7 @@
 
 My internet website.
 
-Made with [Wintersmith][1], [jade][2], [sass][3] & [coffee script][4].
+Made with [wintersmith][1], [jade][2], [sass][3] & [coffee script][4].
 Hosted on [GitHub Pages][gh].
 
 [1]:http://wintersmith.io/
