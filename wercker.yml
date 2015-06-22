@@ -1,0 +1,12 @@
+box: wercker/nodejs
+build:
+  steps:
+    - npm-install
+    - grunt:
+        tasks: build
+deploy:
+  steps:
+    - lukevivier/gh-pages:
+        token: $GIT_TOKEN
+        domain: lnsd.es
+        basedir: build

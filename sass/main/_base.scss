@@ -1,0 +1,15 @@
+// Colors
+$home-primary: #efefef !default;
+$home-primary-middle: #b4b4b4 !default;
+$home-primary-dark: #525252 !default;
+$home-light: #fff !default;
+$home-dark: #000 !default;
+
+// Fonts
+$body-font-family: "Source Sans Pro", sans-serif;;
+$headline-font-family: 'Montserrat', sans-serif;
+
+// Sections bg image
+$bg-img: "http://localhost:8080/assets/lnsd-antenna-bg.jpg";
+
+@import "modules/all";

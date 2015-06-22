@@ -1,0 +1,12 @@
+{
+  "name": "svg-test",
+  "authors": [
+    "LNSD <lorenzodelgado.dev@gmail.com>"
+  ],
+  "description": "SVG Animation test page",
+  "dependencies": {
+    "bootstrap-sass": "~3.3.5",
+    "components-font-awesome": "~4.3.0",
+    "jquery": "~2.1.4"
+  }
+}
