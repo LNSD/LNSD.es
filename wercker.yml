@@ -2,7 +2,7 @@ box: wercker/nodejs
 build:
   steps:
     - npm-install
-    - bower-install
+    - plasticine/bower-install
     - grunt:
         fail-on-warnings: true
         tasks: build
