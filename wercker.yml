@@ -4,6 +4,7 @@ build:
     - npm-install
     - bower-install
     - grunt:
+        fail-on-warnings: true
         tasks: build
 deploy:
   steps:
