@@ -9,6 +9,3 @@ $('a[href^="#"]').on 'click', (event) ->
 # Asynchronously load the svg logo
 
 $('#main-logo').load 'assets/lnsd-big-logo.svg'
-
-loaded() ->
-  alert('Loaded!')
