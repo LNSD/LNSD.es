@@ -19,7 +19,7 @@ body {
   font-family: $body-font-family;
   color: $lnsd-primary-dark;
 
-  @include cover-bg($bg-img, $position: center top, $size: cover);
+  @include cover-bg($bg-img, $position: center, $size: cover);
 }
 
 // Font styles
