@@ -122,18 +122,16 @@ nav {
     }
     &:last-child::after {display: none}
 
-
     a {
       padding: 15px 45px;
-      background-color: rgba(255,255,255,.1);
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 2px;
 
       &:hover,
       &:focus {
         color: $lnsd-primary-dark;
-        text-decoration: none;
-        background-color: rgba(255,255,255,.75);
+        font-weight: bolder;
+        background-color: rgba(255,255,255,.6);
       }
     }
   }
