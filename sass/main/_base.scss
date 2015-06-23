@@ -1,15 +1,18 @@
 // Colors
-$home-primary: #efefef !default;
-$home-primary-middle: #b4b4b4 !default;
-$home-primary-dark: #525252 !default;
-$home-light: #fff !default;
-$home-dark: #000 !default;
+$lnsd-primary-light: #e6e6e6 !default;
+$lnsd-primary-middle: #b4b4b4 !default;
+$lnsd-primary-dark: #323232 !default;
+
+//Main antenna color palette
+$main-color-cyan: #032540;
+$main-color-dark: #00172A;
+$main-color-blue: #055173;
+$main-color-light: #4B778C;
+$main-color-dirt: #8B7F67;
 
 // Fonts
-$body-font-family: "Source Sans Pro", sans-serif;;
 $headline-font-family: 'Montserrat', sans-serif;
-
-// Sections bg image
-$bg-img: "../assets/lnsd-antenna-bg.jpg";
+$body-font-family: "Source Sans Pro", sans-serif;
+$logo-font-family: $body-font-family;
 
 @import "modules/all";

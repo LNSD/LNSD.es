@@ -7,62 +7,28 @@
 
 /* Partial imports */
 @import "main/partials/reset";
+@import "main/partials/fullscreen";
+@import "main/partials/alingment";
+
+// Variables
+$bg-img: "../assets/lnsd-antenna-bg.jpg";
 
 // Containers
-html {
-	height: 100%;
-}
-
 body {
-	overflow: hidden;
-	color: $home-primary-dark;
-	font-family: $body-font-family;
-	background-color: $home-dark;	
+  background-color: $lnsd-primary-dark;
+  font-family: $body-font-family;
+  color: $lnsd-primary-dark;
+
+  @include cover-bg($bg-img, $position: center top, $size: cover);
 }
 
-.full-height {
-	height: 100%;
-	margin: {
-		top: 0;
-		bottom: 0;
-	}
-}
-
-.full-width {
-	width: 100%;
-	margin: {
-		left: 0;
-		right: 0;
-	}
-}
-
-.container,
-.container-fluid{
-	display: table;
-}
-
-.row {
-	height: 100%;
-	display: table-cell;
-	vertical-align: middle;
-}
-
-.align-top {
-	vertical-align: baseline;
-}
-
-.align-bottom {
-	vertical-align: bottom;
-}
-
-// Fonts
-
+// Font styles
 .font-light {
-	color: $home-light;
+  color: $lnsd-primary-light;
 }
 
 .font-dark {
-	color: $home-primary-dark;
+  color: $lnsd-primary-dark;
 }
 
 h1, .h1,
@@ -78,27 +44,25 @@ h6, .h6 {
 }
 
 p {
-	margin: 0 0 25px;	
-	font-size: 16px;
-	font-weight: 300;
-	text-align: justify;
-  	
-  	&:last-of-type {
-  		margin: 0;
-  	}
+  margin: 0 0 25px;
+  font-size: 16px;
+  font-weight: 300;
+  text-align: justify;
+
+  &:last-of-type {
+    margin: 0;
+  }
 }
 
 @media(min-width:$screen-xs-max) {
-
   p {
-	margin: 0 0 15px;
-	font-size: 18px;
+    margin: 0 0 15px;
+    font-size: 18px;
   }
-
 }
 
 a {
-  color: $home-primary-dark;
+  color: $lnsd-primary-light;
   font-weight: 400;
   -webkit-transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
@@ -107,94 +71,81 @@ a {
   &:hover,
   &:focus {
 	text-decoration: none;
-	color: darken($home-primary-middle,0.2);
+	color: darken($lnsd-primary-middle,0.2);
   }
 }
 
-// Sections base style
-@mixin section($imgpath, $size: cover, $position:center center, $attachment: fixed, $repeat: no-repeat) {
-  background: {
-    image: url($imgpath);
-    size: $size;
-    position: $position;
-    attachment: $attachment;
-    repeat: $repeat;
+// Logo styles
+#main-logo {
+  .logo-circle {
+    fill: rgba(255,255,255,.25);
+    stroke:$lnsd-primary-light;
+    stroke-width:9;
+  }
+  .logo-cross {
+    fill: $lnsd-primary-light;
+    stroke:$lnsd-primary-light;
+    stroke-width:5;
   }
 }
 
-#top {
-  @include section($bg-img);
+#text-logo {
+  font-family: $body-font-family;
+  font-size: 60px;
+  font-weight: 300;
+  letter-spacing: 7px;
+}
 
-  h1 {
-    font-size: 80px;
-    margin-bottom: 0;
-  }
+// Info style
+#info {
+  margin-bottom: 15px;
 
-  h2 {
-    font-size: 20px;
-    margin-bottom: 0;
-  }
+  h2 { margin: 0; }
+  p { margin: 0; }
+}
 
-  p {
-    margin:{
-      top: 7px;
-      bottom: 7px;
+
+// Navigation menu
+nav {
+  list-style-type: none;
+  padding: 15px;
+  border-top: 1px solid $lnsd-primary-light;
+  border-bottom: 1px solid $lnsd-primary-light;
+
+  li {
+    display: inline;
+
+    &::after {
+      content: "✕"; //—
+      margin: 0 10px;
+      color: rgba(255,255,255,.75);
     }
-  }
+    &:last-child::after {display: none}
 
-  @media(max-width: $screen-xs-max) {
-    h1 {
-      font-size: 60px;
-    }
 
-    h2 {
-      font-size: 20px;
-    }
+    a {
+      padding: 15px 45px;
+      background-color: rgba(255,255,255,.1);
+      text-transform: uppercase;
+      letter-spacing: 1px;
 
-    p {
-      font-size: 18px;
-      margin:{
-        top: 3px;
-        bottom: 3px;
+      &:hover,
+      &:focus {
+        color: $lnsd-primary-dark;
+        text-decoration: none;
+        background-color: rgba(255,255,255,.75);
       }
     }
   }
+}
 
-  .box {
-    background-color: transparent;
-    text-align: center;
-  }
+#photo-credit {
+  font-size: 12px;
+  font-weight: 300;
+  text-align: right;
 
-  .btn {
-    text-transform: uppercase;
-    font-family: $headline-font-family;
-    font-weight: 400;
-
-    -webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
-  }
-
-  .btn-circle {
-    width: 70px;
-    height: 70px;
-    margin-top: 15px;
-    padding: 7px 16px;
-    border: 2px solid $home-light;
-    border-radius: 35px;
-    font-size: 40px;
-    color: $home-light;
-    background: transparent;
-
-    -webkit-transition: background .3s ease-in-out;
-    -moz-transition: background .3s ease-in-out;
-    transition: background .3s ease-in-out;
-
-    &:hover,
-    &:focus {
-      outline: none;
-      color: $home-light;
-      background: transparentize($home-light, 0.9);
-    }
+  a {
+    padding: 5px 10px;
+    background-color: rgba(255,255,255,.05);
   }
 }

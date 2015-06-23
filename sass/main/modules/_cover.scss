@@ -1,0 +1,10 @@
+// Set a bg cover
+@mixin cover-bg($imgpath, $size: cover, $position:center center, $attachment: fixed, $repeat: no-repeat) {
+  background: {
+    image: url($imgpath);
+    size: $size;
+    position: $position;
+    attachment: $attachment;
+    repeat: $repeat;
+  }
+}

@@ -1,33 +1,53 @@
-//- Homepage (index.html)
+//- Main (index.html)
+- var bg_photo_credit = { name: "S Hassler", url: 'https://www.flickr.com/photos/sh485/', }
 
 doctype html
 html(lang='en')
-	head
-		meta(charset='utf-8')
-		meta(http-equiv='X-UA-Compatible', content='IE=edge')
-		meta(name='viewport', content='width=device-width, initial-scale=1')
-		meta(name='description', content='')
-		meta(name='author', content='')
-	
-		title SVG Animation test
-		
-		// Styling
-		link(href='styles/main.css', rel='stylesheet')
-		link(href='http://fonts.googleapis.com/css?family=Montserrat:400,700', rel='stylesheet', type='text/css')
-		link(href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400', rel='stylesheet', type='text/css')
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        meta(name='description', content='')
+        meta(name='author', content='')
 
-		// JavaScript
-		script(src='js/jquery.min.js')
-		script(src='js/bootstrap.min.js')
+        title LNSD
 
-	body#top.full-height
-		.container-fluid.full-height
-			.row
-				.col-lg-12
-					.box.font-light
-						h1 LNSD
-						h2 Lorenzo Delgado Antequera
-						p Electronics &amp; Telecommunications Engineer
-		
-		// JavaScript
-		script(src='js/main.js')
+        // Styling
+        link(href='styles/main.css', rel='stylesheet')
+        link(href='http://fonts.googleapis.com/css?family=Montserrat:400,700', rel='stylesheet', type='text/css')
+        link(href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400', rel='stylesheet', type='text/css')
+
+        // JavaScript
+        script(src='js/jquery.min.js')
+        script(src='js/bootstrap.min.js')
+
+    body#top.full-height.font-light
+        header.height-95
+            .container.full-height.display-table
+                .row
+                    .col-lg-offset-3.col-lg-6
+                        #main-logo
+                        h1#text-logo.text-center LNSD
+
+                        #info
+                            h2.text-center Lorenzo Delgado Antequera
+                            p.text-center Electronics &amp; Telecommunications Engineer
+
+                        nav.text-center
+                            ul
+                                li
+                                    a(href="") resume
+                                li
+                                    a(href="") blog
+                                li
+                                    a(href="") contact
+
+        footer.height-5
+            .container-fluid
+                .row
+                    .col-lg-offset-10.col-lg-2
+                        #photo-credit.font-light
+                            a(href=bg_photo_credit.url)!="Photo Credit: "+bg_photo_credit.name
+
+        // JavaScript
+        script(src='js/main.js')
