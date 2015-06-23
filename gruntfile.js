@@ -42,29 +42,33 @@ module.exports = function(grunt) {
 				},
 				files: { '<%= dirs.output %>/js/main.js': 'scripts/*.coffee' }
 			}
-		},
-		watch: {
-			jade: {
-				files: '**/*.jade',
-				tasks: ['jade']
-			},
-			sass: {
-				files: '**/*.scss',
-				tasks: ['sass']
-			},
-			coffee: {
-				files: '**/*.coffee',
-				tasks: ['coffee']
-			}
 		}
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-copy');
-	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-jade');
 	grunt.loadNpmTasks('grunt-contrib-coffee');
 	grunt.loadNpmTasks('grunt-sass');
+
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.config('watch', {
+        options: {
+            livereload: true
+        },
+        jade: {
+            files: '**/*.jade',
+            tasks: ['jade']
+        },
+        sass: {
+            files: '**/*.scss',
+            tasks: ['sass']
+        },
+        coffee: {
+            files: '**/*.coffee',
+            tasks: ['coffee']
+        }
+    });
 
 	grunt.registerTask('build', 'Compiles all of the source files and copies the assets to the build directory.', ['clean', 'copy', 'coffee', 'sass', 'jade']);
 	grunt.registerTask('default', 'Compiles everything and copies it to build directory.', ['build']);
