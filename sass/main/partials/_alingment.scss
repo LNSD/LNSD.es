@@ -11,13 +11,13 @@
   .row {
     display: table-cell;
     vertical-align: middle;
-  }
 
-  .align-top {
-    vertical-align: baseline;
-  }
+    .align-top {
+      vertical-align: baseline;
+    }
 
-  .align-bottom {
-    vertical-align: bottom;
+    .align-bottom {
+      vertical-align: bottom;
+    }
   }
 }
