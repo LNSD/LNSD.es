@@ -2,8 +2,6 @@ box: abiskop/node-imagemagick
 build:
   steps:
     - npm-install
-    - npm-install:
-        options: bower
     - script:
         name: bower install
         code: |
