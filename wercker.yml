@@ -1,4 +1,4 @@
-box: wercker/nodejs
+box: abiskop/node-imagemagick
 build:
   steps:
     - npm-install
