@@ -10,15 +10,10 @@
 @import "main/partials/alingment";
 
 // Variables
-$bg-img: "../assets/lnsd-radar-bg.jpg";
 
 // Containers
 body {
   background-color: $lnsd-primary-dark;
   font-family: $body-font-family;
   color: $lnsd-primary-dark;
-
-  @include cover-bg($bg-img, $position: left top, $size: cover);
 }
-
-h1, h2, h3, h4, h5 { font-family: $eightbit-font-family; }
