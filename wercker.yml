@@ -2,7 +2,6 @@ box: abiskop/node-imagemagick
 build:
   steps:
     - npm-install
-    - plasticine/bower-install
     - grunt:
         fail-on-warnings: true
         tasks: build

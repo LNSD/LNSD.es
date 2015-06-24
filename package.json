@@ -19,5 +19,8 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-responsive-images": "^0.1.6",
     "grunt-sass": "^1.0.0"
+  },
+  "scripts": {
+    "postinstall": "bower install"
   }
 }
