@@ -1,0 +1,34 @@
+//- Page not found (404.html)
+- var bg_photo_credit = { name: "Saxuisse", url: 'https://www.flickr.com/photos/saxuisse' }
+
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        meta(name='description', content='')
+        meta(name='author', content='')
+
+        title LNSD
+
+        // Styling
+        link(href='styles/404.css', rel='stylesheet')
+        link(href='http://fonts.googleapis.com/css?family=Montserrat:400,700', rel='stylesheet', type='text/css')
+        link(href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400', rel='stylesheet', type='text/css')
+        link(href='http://fonts.googleapis.com/css?family=Press+Start+2P', rel='stylesheet', type='text/css')
+
+        // JavaScript
+        script(src='js/jquery.min.js')
+        script(src='js/bootstrap.min.js')
+
+    body#top.full-height
+        header.height-95
+            h1 404 Page not found
+
+        footer.height-5
+            .container-fluid
+                .row
+                    .col-lg-offset-10.col-lg-2
+                        #photo-credit.font-dark
+                            a(href=bg_photo_credit.url)!="Photo Credit: "+bg_photo_credit.name
