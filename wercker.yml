@@ -1,4 +1,4 @@
-box: abiskop/node-imagemagick
+box: node-imagemagick
 build:
   steps:
     - npm-install
