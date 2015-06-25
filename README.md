@@ -2,11 +2,14 @@
 
 My internet website.
 
-Made with [wintersmith][1], [jade][2], [sass][3] & [coffee script][4].
+Made with [metalsmith][1], [jade][2], [sass][3] & [coffee script][4].
+Deployed with [wercker][wr] & [docker][dk]
 Hosted on [GitHub Pages][gh].
 
-[1]:http://wintersmith.io/
+[1]:http://metalsmith.io/
 [2]:http://jade-lang.com/
 [3]:http://sass-lang.com/
 [4]:http://coffeescript.org/
+[wr]:http://wercker.com/
+[dk]:https://www.docker.com/
 [gh]:http://pages.github.com/
