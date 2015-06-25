@@ -26,8 +26,8 @@ module.exports = function(grunt) {
 			build:{
 				options: { pretty: true },
 				files: {
-                    '<%= dirs.output %>/index.html': 'jade/index.jade',
-                    '<%= dirs.output %>/404.html': 'jade/404.jade'
+                    '<%= dirs.output %>/index.html': 'templates/index.jade',
+                    '<%= dirs.output %>/404.html': 'templates/404.jade'
                 }
 			}
 		},
@@ -35,8 +35,8 @@ module.exports = function(grunt) {
 			build:{
 				options: { style: 'expanded' },
 				files: {
-                    '<%= dirs.output %>/styles/main.css': 'sass/main.scss',
-                    '<%= dirs.output %>/styles/404.css': 'sass/404.scss'
+                    '<%= dirs.output %>/styles/main.css': 'styles/main.scss',
+                    '<%= dirs.output %>/styles/404.css': 'styles/404.scss'
                 }
 			}
 		},
