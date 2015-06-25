@@ -5,7 +5,8 @@ module.exports = function(grunt) {
 		// Variables
 		pkg: grunt.file.readJSON('package.json'),
 		dirs: {
-			output: 'build'
+			output: 'build',
+            sources: 'content'
 		},
 		bower: {
 			js: {
@@ -48,7 +49,23 @@ module.exports = function(grunt) {
 				},
 				files: { '<%= dirs.output %>/js/main.js': 'scripts/*.coffee' }
 			}
-		}
+		},
+
+        // Wintersmith build tasks
+        metalsmith: {
+            blog:{
+                options: {
+                    metadata: {
+                        title: "<%= pkg.title %>",
+                        desc: "<%= pkg.description %>",
+                        author: "<%= pkg.author %>"
+                    },
+                    plugins: grunt.file.readJSON('metalsmith.json')
+                },
+                src: '<%= dirs.sources %>',
+                dest: '<%= dirs.output %>/blog'
+            }
+        }
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-clean');
@@ -56,6 +73,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-jade');
     grunt.loadNpmTasks('grunt-contrib-coffee');
     grunt.loadNpmTasks('grunt-sass');
+    grunt.loadNpmTasks('grunt-metalsmith');
 
     grunt.loadNpmTasks('grunt-responsive-images');
     grunt.config('responsive_images', {
