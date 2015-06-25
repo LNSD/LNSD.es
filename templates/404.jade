@@ -1,21 +1,13 @@
 //- Page not found (404.html)
+extends layout
 
 doctype html
-html(lang='en')
-    head
-        meta(charset='utf-8')
-        meta(http-equiv='X-UA-Compatible', content='IE=edge')
-        meta(name='viewport', content='width=device-width, initial-scale=1')
-        meta(name='description', content='')
-        meta(name='author', content='')
+block styles
+    link(href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Press+Start+2P', rel='stylesheet', type='text/css')
+    link(href='css/404.css', rel='stylesheet')
 
-        title 404 - LNSD
-
-        // Styling
-        link(href='styles/404.css', rel='stylesheet')
-        link(href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400', rel='stylesheet', type='text/css')
-        link(href='http://fonts.googleapis.com/css?family=Press+Start+2P', rel='stylesheet', type='text/css')
-
+block body
     body#top.full-height
         header.container-fluid.full-height.full-width.display-table
                 .row

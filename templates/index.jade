@@ -1,26 +1,13 @@
 //- Main (index.html)
-- var bg_photo_credit = { name: "S Hassler", url: 'https://www.flickr.com/photos/sh485/' }
+extends layout
 
-doctype html
-html(lang='en')
-    head
-        meta(charset='utf-8')
-        meta(http-equiv='X-UA-Compatible', content='IE=edge')
-        meta(name='viewport', content='width=device-width, initial-scale=1')
-        meta(name='description', content='')
-        meta(name='author', content='')
+append vars
+    - var bg_photo_credit = { name: "S Hassler", url: 'https://www.flickr.com/photos/sh485/' }
 
-        title LNSD
+append javascript
+    script(src='js/vendor/jquery.min.js')
 
-        // Styling
-        link(href='styles/main.css', rel='stylesheet')
-        link(href='http://fonts.googleapis.com/css?family=Montserrat:400,700', rel='stylesheet', type='text/css')
-        link(href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400', rel='stylesheet', type='text/css')
-
-        // JavaScript
-        script(src='js/jquery.min.js')
-        script(src='js/bootstrap.min.js')
-
+block body
     body#top.full-height.font-light
         header.height-95
             .container.full-height.display-table

@@ -20,8 +20,8 @@ module.exports = function(grunt) {
 		copy: {
 			assets: { src: ['assets/*', '!assets/favicon.ico'], dest:'<%= dirs.output %>/assets/', expand: true, flatten: true },
 			favicon: { src: 'assets/favicon.ico', dest: '<%= dirs.output %>/', expand: true, flatten: true },
-			bootstrap: { src: '<%= bower.js.bootstrap %>', dest: '<%= dirs.output %>/js/', expand: true, flatten: true },
-			jquery: { src: '<%= bower.js.jquery %>', dest: '<%= dirs.output %>/js/', expand: true, flatten: true }
+			bootstrap: { src: '<%= bower.js.bootstrap %>', dest: '<%= dirs.output %>/js/vendor/', expand: true, flatten: true },
+			jquery: { src: '<%= bower.js.jquery %>', dest: '<%= dirs.output %>/js/vendor/', expand: true, flatten: true }
 		},
 		jade: {
 			build:{
@@ -36,8 +36,8 @@ module.exports = function(grunt) {
 			build:{
 				options: { style: 'expanded' },
 				files: {
-                    '<%= dirs.output %>/styles/main.css': 'styles/main.scss',
-                    '<%= dirs.output %>/styles/404.css': 'styles/404.scss'
+                    '<%= dirs.output %>/css/main.css': 'styles/main.scss',
+                    '<%= dirs.output %>/css/404.css': 'styles/404.scss'
                 }
 			}
 		},
