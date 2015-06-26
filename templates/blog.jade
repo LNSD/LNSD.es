@@ -1,0 +1,11 @@
+//Blog index (blog/index.html)
+extends layout
+
+block body
+    body
+        each post in collections.posts
+            post.content-article
+                header
+                    span.timestamp= post.date
+                    h2
+                        a(href='/' + post.path)= post.title

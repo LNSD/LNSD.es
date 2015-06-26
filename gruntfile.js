@@ -25,7 +25,14 @@ module.exports = function(grunt) {
 		},
 		jade: {
 			build:{
-				options: { pretty: true },
+				options: {
+                    pretty: true,
+                    data: {
+                        name: "<%= pkg.name %>",
+                        desc: "<%= pkg.description %>",
+                        author: "<%= pkg.author %>"
+                    }
+                },
 				files: {
                     '<%= dirs.output %>/index.html': 'templates/index.jade',
                     '<%= dirs.output %>/404.html': 'templates/404.jade'
@@ -56,7 +63,7 @@ module.exports = function(grunt) {
             blog:{
                 options: {
                     metadata: {
-                        title: "<%= pkg.title %>",
+                        name: "<%= pkg.name %>",
                         desc: "<%= pkg.description %>",
                         author: "<%= pkg.author %>"
                     },
@@ -95,7 +102,7 @@ module.exports = function(grunt) {
             livereload: true
         },
         jade: {
-            files: '**/*.jade',
+            files: ['templates/layout.jade', 'templates/index.jade', 'templates/404.jade'],
             tasks: ['jade']
         },
         sass: {
@@ -107,11 +114,12 @@ module.exports = function(grunt) {
             tasks: ['coffee']
         },
         metalsmith: {
-            files: 'metalsmith.json',
+            files: ['metalsmith.json', 'templates/layout.jade', 'templates/blog.jade', 'content/**/*'],
             tasks: ['metalsmith']
         }
     });
 
 	grunt.registerTask('build', 'Compiles all of the source files and copies the assets to the build directory.', ['clean', 'copy', 'responsive_images', 'coffee', 'sass', 'jade']);
+    grunt.registerTask('build:all', 'Compiles all of the source files (blog included)', ['build', 'metalsmith']);
 	grunt.registerTask('default', 'Compiles everything and copies it to build directory.', ['build']);
 };

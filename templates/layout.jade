@@ -7,12 +7,11 @@ html(lang='en')
             meta(charset='utf-8')
             meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
             meta(name='viewport', content='width=device-width')
-            meta(name='description', content='')
-            meta(name='author', content='')
-
+            meta(name='description', content=desc)
+            meta(name='author', content=author.name+' <'+author.email+'>')
             title
                 block title
-                    = 'LNSD'
+                    = name
 
             //- link(rel='alternate', href='/feed.xml', type='application/rss+xml', title=blog.description)
 

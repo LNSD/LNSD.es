@@ -34,7 +34,7 @@ block body
             block footer
                 p.container
                     | #{new Date().getFullYear()}&nbsp;&copy;&nbsp;
-                    //a(href=owner.uri)= owner.name
+                    a(href='mailto:'+author.email)= author.name
 
 
 
