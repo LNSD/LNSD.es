@@ -1,10 +1,30 @@
 {
-  "metalsmith-markdown": {},
-  "metalsmith-permalinks": {
-    "pattern": ":title"
-  },
-  "metalsmith-templates": {
-    "engine": "jade",
-    "directory": "templates"
+  "metalsmith-collections": {
+    "articles": {
+      "pattern": "content/**/*.md",
+      "sortBy": "date",
+      "reverse": true
+    },
+    "metalsmith-pagination": {
+      "collections.articles": {
+        "perPage": 5,
+        "first": "index.html",
+        "template": "index.jade",
+        "path": "page/:num/index.html"
+      }
+    },
+    "metalsmith-markdown": {
+      "gfm": true,
+      "tables": true
+    },
+    "metalsmith-build-date": true,
+    "metalsmith-snippet": { "maxLength": 300 },
+    "metalsmith-permalinks": {
+      "pattern": ":title"
+    },
+    "metalsmith-templates": {
+      "engine": "jade",
+      "directory": "templates"
+    }
   }
 }

@@ -105,6 +105,10 @@ module.exports = function(grunt) {
         coffee: {
             files: '**/*.coffee',
             tasks: ['coffee']
+        },
+        metalsmith: {
+            files: 'metalsmith.json',
+            tasks: ['metalsmith']
         }
     });
 
