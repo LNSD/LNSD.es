@@ -11,7 +11,7 @@
   },
   "metalsmith-build-date": true,
   "metalsmith-permalinks": {
-    "pattern": "blog/:date/:title",
+    "pattern": ":date/:title",
     "date":"YYYY"
   },
   "metalsmith-templates": {
