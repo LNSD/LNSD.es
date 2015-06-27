@@ -1,9 +1,9 @@
 {
-  "name": "svg-test",
+  "name": "LNSD",
   "authors": [
-    "LNSD <lorenzodelgado.dev@gmail.com>"
+    "Lorenzo Delgado <lorenzo.delgado@lnsd.es>"
   ],
-  "description": "SVG Animation test page",
+  "description": "Lorenzo Delgado internet website",
   "dependencies": {
     "bootstrap-sass": "~3.3.5",
     "components-font-awesome": "~4.3.0",

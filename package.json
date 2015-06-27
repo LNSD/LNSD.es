@@ -6,6 +6,7 @@
     "name": "Lorenzo Delgado",
     "email": "lorenzo.delgado@lnsd.es"
   },
+  "homepage": "http://LNSD.es",
   "repository": {
     "type": "git",
     "url": "https://github.com/LNSD/lnsd.es.git"
@@ -26,6 +27,7 @@
     "grunt-metalsmith": "^1.0.0",
     "grunt-responsive-images": "^0.1.6",
     "grunt-sass": "^1.0.0",
+    "grunt-sitemap": "^1.2.1",
     "jade": "^1.11.0",
     "metalsmith": "^1.7.0",
     "metalsmith-build-date": "^0.1.0",
