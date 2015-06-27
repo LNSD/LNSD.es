@@ -5,13 +5,23 @@
       "reverse": true
     }
   },
+  "metalsmith-collections-paginate": {
+    "posts": {
+      "perPage": 5,
+      "template": "blog.jade",
+      "first": "index.html"
+    }
+  },
   "metalsmith-markdown": {
     "gfm": true,
     "tables": true
   },
   "metalsmith-build-date": true,
+  "metalsmith-snippet": {
+    "maxLength": 300
+  },
   "metalsmith-permalinks": {
-    "pattern": ":date/:title",
+    "pattern": ":collection/:date/:title",
     "date":"YYYY"
   },
   "metalsmith-templates": {
