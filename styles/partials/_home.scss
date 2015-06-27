@@ -1,9 +1,14 @@
-// Variables
+// Home style section (index.html)
+@import "../base";
 $bg-img: "../assets/lnsd-antenna-bg.jpg";
 
 .home {
   @include cover-bg($bg-img, $position: center, $size: cover);
   background-color: $lnsd-primary-dark;
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $lnsd-primary-light;
+  }
 
   p {
     text-align: center;

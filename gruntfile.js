@@ -112,11 +112,11 @@ module.exports = function(grunt) {
             tasks: ['jade']
         },
         sass: {
-            files: 'styles/*.scss',
+            files: 'styles/**/*.scss',
             tasks: ['sass']
         },
         coffee: {
-            files: 'scripts/*.coffee',
+            files: 'scripts/**/*.coffee',
             tasks: ['coffee']
         },
         metalsmith: {
