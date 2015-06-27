@@ -1,14 +1,17 @@
 //- Page not found (404.html)
 extends layout
 
-doctype html
-block styles
-    link(href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400', rel='stylesheet', type='text/css')
+append vars
+    - var bodyclass = 'not-found';
+
+prepend title
+    | #{"404 Page not found" + " • "}
+
+append styles
     link(href='http://fonts.googleapis.com/css?family=Press+Start+2P', rel='stylesheet', type='text/css')
-    link(href='/css/404.css', rel='stylesheet')
 
 block body
-    body#top.full-height
+    body(class=bodyclass)#top.full-height
         header.container-fluid.full-height.full-width.display-table
                 .row
                     .col-lg-offset-4.col-lg-4.text-center
@@ -20,4 +23,5 @@ block body
                             a(href="mailto:lorenzo.delgado@lnsd.es")!=' lorenzo.delgado@lnsd.es'
 
                         nav.text-center
-                            a(href="/") Return to home
+                            li
+                                a(href="/") Return to home

@@ -1,0 +1,23 @@
+// Center horizontally inside a div
+.center {
+  display: block;
+  margin: 0 auto;
+}
+
+// Vertical center using Twitter Bootstrap
+.display-table {
+  display: table;
+
+  .row {
+    display: table-cell;
+    vertical-align: middle;
+
+    .align-top {
+      vertical-align: baseline;
+    }
+
+    .align-bottom {
+      vertical-align: bottom;
+    }
+  }
+}

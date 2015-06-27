@@ -2,40 +2,33 @@
 @import "vendor/bootstrap";
 
 /* Main imports */
-@import "main/base";
+@import "base";
 
 /* Partial imports */
-@import "main/partials/reset";
-@import "main/partials/fullscreen";
-@import "main/partials/alingment";
+@import "partials/reset";
+@import "partials/fullscreen";
+@import "partials/alingment";
+@import "partials/home";
+@import "partials/404";
 
-// Variables
-$bg-img: "../assets/lnsd-antenna-bg.jpg";
+html {
+  height: 100%;
+}
 
-// Containers
 body {
-  background-color: $lnsd-primary-dark;
+  min-height: 100%;
+  background-color: white;
   font-family: $body-font-family;
   color: $lnsd-primary-dark;
-
-  @include cover-bg($bg-img, $position: center, $size: cover);
 }
 
 // Font styles
-.font-light {
-  color: $lnsd-primary-light;
-}
+.font-light { color: $lnsd-primary-light; }
+.font-dark { color: $lnsd-primary-dark; }
+.huge { font-size: 90px; }
 
-.font-dark {
-  color: $lnsd-primary-dark;
-}
-
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
+// Mark styles
+h1, h2, h3, h4, h5, h6 {
   font-family: $headline-font-family;
   font-weight: 700;
   text-transform: uppercase;
@@ -47,13 +40,9 @@ p {
   font-size: 16px;
   font-weight: 300;
   text-align: justify;
-
-  &:last-of-type {
-    margin: 0;
-  }
 }
 
-@media(min-width:$screen-xs-max) {
+@media(min-width: $screen-xs-max) {
   p {
     margin: 0 0 15px;
     font-size: 18px;
@@ -61,7 +50,7 @@ p {
 }
 
 a {
-  color: $lnsd-primary-light;
+  color: $lnsd-primary-middle;
   font-weight: 400;
   -webkit-transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
@@ -69,58 +58,22 @@ a {
 
   &:hover,
   &:focus {
-	text-decoration: none;
+    text-decoration: none;
     font-weight: bold;
     color: $lnsd-primary-dark;
   }
 }
 
-// Logo styles
-#main-logo {
-  .logo-circle {
-    fill: rgba(255,255,255,.25);
-    stroke:$lnsd-primary-light;
-    stroke-width:9;
-  }
-  .logo-cross {
-    fill: $lnsd-primary-light;
-    stroke:$lnsd-primary-light;
-    stroke-width:5;
-  }
-}
-
-#text-logo {
-  font-family: $body-font-family;
-  font-size: 60px;
-  font-weight: 300;
-  letter-spacing: 7px;
-}
-
-// Info style
-#info {
-  margin-bottom: 15px;
-
-  h2 { margin: 0; }
-  p { margin: 0; }
-}
-
-
 // Navigation menu
+
 nav {
   list-style-type: none;
-  padding: 15px;
+  padding: 12px;
   border-top: 1px solid $lnsd-primary-light;
   border-bottom: 1px solid $lnsd-primary-light;
 
   li {
     display: inline;
-
-    &::after {
-      content: "•"; //✕,—
-      margin: 0 10px;
-      color: rgba(255,255,255,.75);
-    }
-    &:last-child::after {display: none}
 
     a {
       padding: 15px 45px;
@@ -131,14 +84,29 @@ nav {
       &:focus {
         color: $lnsd-primary-dark;
         font-weight: bolder;
-        background-color: rgba(255,255,255,.6);
       }
     }
   }
 }
 
-#photo-credit {
-  font-size: 12px;
-  font-weight: 300;
-  text-align: right;
+header nav {
+  padding: 15px;
+
+  li {
+    &::after {
+      content: "•"; //✕,—
+      margin: 0 10px;
+      color: rgba(255, 255, 255, .75);
+    }
+    &:last-child::after {
+      display: none
+    }
+
+    a {
+      &:hover,
+      &:focus {
+        background-color: rgba(255, 255, 255, .6);
+      }
+    }
+  }
 }

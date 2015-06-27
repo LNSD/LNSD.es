@@ -1,0 +1,57 @@
+// Variables
+$bg-img: "../assets/lnsd-antenna-bg.jpg";
+
+.home {
+  @include cover-bg($bg-img, $position: center, $size: cover);
+  background-color: $lnsd-primary-dark;
+
+  p {
+    text-align: center;
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+
+  a {
+    color: $lnsd-primary-light;
+  }
+
+  // Logo styles
+  #main-logo {
+    .logo-circle {
+      fill: rgba(255, 255, 255, .25);
+      stroke: $lnsd-primary-light;
+      stroke-width: 9;
+    }
+    .logo-cross {
+      fill: $lnsd-primary-light;
+      stroke: $lnsd-primary-light;
+      stroke-width: 5;
+    }
+  }
+
+  #text-logo {
+    font-family: $body-font-family;
+    font-size: 60px;
+    font-weight: 300;
+    letter-spacing: 7px;
+  }
+
+  // Info style
+  #info {
+    margin-bottom: 15px;
+
+    h2 {
+      margin: 0;
+    }
+    p {
+      margin: 0;
+    }
+  }
+
+  #photo-credit {
+    font-size: 12px;
+    font-weight: 300;
+    text-align: right;
+  }
+}

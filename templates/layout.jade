@@ -1,6 +1,6 @@
 doctype html
 block vars
-    //- var bodyclass = 'index';
+
 html(lang='en')
     head
         block head
@@ -17,9 +17,9 @@ html(lang='en')
 
             // Styling
             block styles
+                link(rel='stylesheet', href='/css/main.css')
                 link(href='http://fonts.googleapis.com/css?family=Montserrat:400,700', rel='stylesheet', type='text/css')
                 link(href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400', rel='stylesheet', type='text/css')
-                link(rel='stylesheet', href='/css/main.css')
 
             // JavaScript
             block javascript

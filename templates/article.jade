@@ -1,10 +1,10 @@
 extends layout
 
-block append vars
+append vars
     - var bodyclass = 'article'
     //- var fullUri = blog.uri + '/' + path
 
-block prepend title
+prepend title
     | #{title + " • "}
 
 block body

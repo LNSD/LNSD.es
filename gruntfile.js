@@ -45,8 +45,7 @@ module.exports = function(grunt) {
 			build:{
 				options: { style: 'expanded' },
 				files: {
-                    '<%= dirs.output %>/css/main.css': 'styles/main.scss',
-                    '<%= dirs.output %>/css/404.css': 'styles/404.scss'
+                    '<%= dirs.output %>/css/main.css': 'styles/main.scss'
                 }
 			}
 		},
