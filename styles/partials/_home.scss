@@ -1,10 +1,19 @@
 // Home style section (index.html)
 @import "../base";
-$bg-img: "../assets/lnsd-antenna-bg.jpg";
+
+$bg-img-xs: "../assets/lnsd-antenna-bg-xs.jpg";
+$bg-img-sm: "../assets/lnsd-antenna-bg-sm.jpg";
+$bg-img-md: "../assets/lnsd-antenna-bg-md.jpg";
+$bg-img-lg: "../assets/lnsd-antenna-bg-lg.jpg";
 
 .home {
-  @include cover-bg($bg-img, $position: center, $size: cover);
   background-color: $lnsd-primary-dark;
+
+  @include cover-bg($bg-img-lg, $position: center, $size: cover);
+  @media (max-width: $screen-xs-max) { @include cover-bg($bg-img-xs, $position: center, $size: cover); }
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max ) { @include cover-bg($bg-img-sm, $position: center, $size: cover); }
+  @media (min-width: $screen-md-min) and (max-width: $screen-md-max ) { @include cover-bg($bg-img-md, $position: center, $size: cover); }
+  @media (min-width: $screen-lg-min) { @include cover-bg($bg-img-lg, $position: center, $size: cover); }
 
   h1, h2, h3, h4, h5, h6 {
     color: $lnsd-primary-light;

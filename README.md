@@ -20,7 +20,7 @@ Hosted on [GitHub Pages][gh].
 ```
 lnsd.es/
 |
-|-- index.html (main)		# Welcome page (main)
+|-- index.html (home)		# Home page
 |-- resume/                 # Resume page
 |   `-- index.html
 |
