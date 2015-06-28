@@ -18,35 +18,36 @@ block body
             .row
                 .col-lg-offset-3.col-lg-6
                     include partials/nav
+        block content
+            section.container
+                header
+                    .row
+                        .col-lg-offset-2.col-lg-8
+                            h2.text-center Recent posts
+                            hr
+                each file in pagination.files
+                    article.row
+                        .list-item.col-lg-offset-2.col-lg-8
+                            header(style="background-image: url("+file.path+"/header-sm.jpg)").cover
+                                .cover-content
+                                    .title
+                                        h3
+                                            a(href='/blog/' + file.path)= file.title
+                                        small
+                                            time.timestamp(datetime=file.date)= moment(file.date).format('MMMM D, YYYY')
+                            section
+                                p!= (!file.brief)?file.snippet:file.brief
 
-        section.container
-            header
-                .row
-                    .col-lg-offset-2.col-lg-8
-                        h2.text-center Recent posts
-                        hr
-            each file in pagination.files
-                article.row
-                    .col-lg-offset-2.col-lg-8
-                        header(style="background-image: url("+file.path+"/header-sm.jpg)").cover
-                            .cover-content
-                                .title
-                                    h3
-                                        a(href='/blog/' + file.path)= file.title
-                                    small!= 'Date: '+file.date
-                                        //time.timestamp(datetime=file.date)= moment(file.date).format('MMMM D, YYYY')
-                        section
-                            p!= (!file.brief)?file.snippet:file.brief
-
-        //nav.navigation.cf
-            if pagination.previous
-                a.btn.pull-right(href='/blog/' + pagination.previous.path)
-                    | Newer&nbsp;&nbsp;
-                    i.icon-right-dir
-            if pagination.next
-                a.btn.pull-left(href='/blog/' + pagination.next.path)
-                    i.icon-left-dir
-                    | &nbsp;&nbsp;Older
+            //nav.navigation.cf
+                if pagination.previous
+                    a.btn.pull-right(href='/blog/' + pagination.previous.path)
+                        | Newer&nbsp;&nbsp;
+                        i.icon-right-dir
+                if pagination.next
+                    a.btn.pull-left(href='/blog/' + pagination.next.path)
+                        i.icon-left-dir
+                        | &nbsp;&nbsp;Older
 
         // JavaScript
         script(src='../js/main.js')
+
