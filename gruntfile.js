@@ -99,6 +99,12 @@ module.exports = function(grunt) {
             dest:'<%= dirs.output %>/assets/',
             expand: true,
             flatten: true
+        },
+        blog: {
+            expand: true,
+            cwd: '<%= dirs.sources %>/',
+            src: './**/*.{gif,png,jpg,jpeg}',
+            dest: '<%= dirs.output %>/blog/posts/'
         }
     });
 
@@ -108,7 +114,7 @@ module.exports = function(grunt) {
             livereload: true
         },
         jade: {
-            files: ['templates/layout.jade', 'templates/index.jade', 'templates/404.jade'],
+            files: ['templates/layout.jade', 'templates/index.jade', 'templates/404.jade', 'templates/partials/*.jade'],
             tasks: ['jade']
         },
         sass: {
@@ -120,7 +126,7 @@ module.exports = function(grunt) {
             tasks: ['coffee']
         },
         metalsmith: {
-            files: ['metalsmith.json', 'templates/layout.jade', 'templates/blog.jade', 'templates/post.jade', 'content/**/*'],
+            files: ['metalsmith.json', 'templates/layout.jade', 'templates/blog.jade', 'templates/post.jade', 'templates/partials/*.jade', 'content/**/*'],
             tasks: ['metalsmith']
         }
     });
