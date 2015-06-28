@@ -31,7 +31,9 @@ $bg-img-lg: "../assets/lnsd-antenna-bg-lg.jpg";
   }
 
   // Logo styles
-  #main-logo {
+  .logo {
+    height: 300px;
+
     .logo-circle {
       fill: rgba(255, 255, 255, .25);
       stroke: $lnsd-primary-light;
@@ -44,11 +46,12 @@ $bg-img-lg: "../assets/lnsd-antenna-bg-lg.jpg";
     }
   }
 
-  #text-logo {
+  .text-logo {
     font-family: $body-font-family;
     font-size: 60px;
     font-weight: 300;
     letter-spacing: 7px;
+    text-align: center;
   }
 
   // Info style

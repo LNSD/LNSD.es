@@ -1,0 +1,47 @@
+// Blog style (blog.jade + post.jade)
+.blog {
+
+  // Logo styles
+  .logo {
+    height: 100px;
+
+    .logo-circle {
+      fill: none;
+      stroke: $lnsd-primary-light;
+      stroke-width: 15;
+    }
+    .logo-cross {
+      fill: $lnsd-primary-dark;
+      stroke: $lnsd-primary-dark;
+      stroke-width: 3;
+    }
+  }
+
+  .text-logo {
+    font-family: $body-font-family;
+    font-size: 25px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+
+  header nav {
+    padding: { top: 8px; bottom: 12px; };
+    margin-bottom: 25px;
+
+    li {
+      &::after {
+        font-size: 20px;
+        color: rgba(0, 0, 0, 0.15);
+      }
+
+      a {
+        padding: 0 45px;
+        &:hover,
+        &:focus {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}

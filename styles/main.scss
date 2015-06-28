@@ -10,6 +10,7 @@
 @import "partials/alingment";
 @import "partials/home";
 @import "partials/404";
+@import "partials/blog";
 
 html {
   height: 100%;
@@ -73,6 +74,7 @@ nav {
   padding: 12px;
   border-top: 1px solid $lnsd-primary-light;
   border-bottom: 1px solid $lnsd-primary-light;
+  text-align: center;
 
   li {
     display: inline;

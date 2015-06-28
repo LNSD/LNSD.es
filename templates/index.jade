@@ -14,21 +14,14 @@ block body
             .container.full-height.display-table
                 .row
                     .col-lg-offset-3.col-lg-6
-                        #main-logo
-                        h1#text-logo.text-center LNSD
+                        .logo
+                        h1.text-logo LNSD
 
                         #info
                             h2.text-center Lorenzo Delgado Antequera
                             p.text-center Electronics &amp; Telecommunications Engineer
 
-                        nav.text-center
-                            ul
-                                li
-                                    a(href="/resume") resume
-                                li
-                                    a(href="/blog") blog
-                                li
-                                    a(href="/contact") contact
+                        include partials/nav
 
         footer.height-5
             .container-fluid

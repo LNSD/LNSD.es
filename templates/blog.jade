@@ -1,25 +1,41 @@
 //Blog index (blog/index.html)
 extends layout
+append vars
+    - var bodyclass = 'blog';
+
+append javascript
+    script(src='../js/vendor/jquery.min.js')
+    script(src='../js/vendor/moment.min.js')
 
 block body
-    body
-        //- each post in collections.posts
-            post.content-article
-                header
-                    span.timestamp= post.date
-                    h2
-                        a(href='/blog/' + post.path)= post.title
+    body(class=bodyclass)
+        header.container
+            .row
+                .col-lg-offset-3.col-lg-6
+                    .logo
+                    .text-logo
+                        h1.text-logo LNSD
+            .row
+                .col-lg-offset-3.col-lg-6
+                    include partials/nav
 
-        each file in pagination.files
-            article.content
-                header.header
-                    small.header-metadata
-                        //- time.timestamp(datetime=file.date)= moment(file.date).format('MMMM D, YYYY') TODO: Add moment.js to bower
-                    h2.content-title
-                        a(href='/blog/' + file.path)= file.title
-                section.content-article!= file.snippet
+        section.container
+            header
+                .row
+                    .col-lg-offset-2.col-lg-8
+                        h2.text-center Recent posts
+                        hr(style="width:50%")
+            each file in pagination.files
+                article.row
+                    .col-lg-offset-2.col-lg-8
+                        header
+                            h3
+                                a(href='/blog/' + file.path)= file.title
+                            small.header-metadata
+                                //time.timestamp(datetime=file.date)= moment(file.date).format('MMMM D, YYYY')
+                        section!= file.snippet
 
-        nav.navigation.cf
+        //nav.navigation.cf
             if pagination.previous
                 a.btn.pull-right(href='/blog/' + pagination.previous.path)
                     | Newer&nbsp;&nbsp;
@@ -28,3 +44,6 @@ block body
                 a.btn.pull-left(href='/blog/' + pagination.next.path)
                     i.icon-left-dir
                     | &nbsp;&nbsp;Older
+
+        // JavaScript
+        script(src='../js/main.js')
