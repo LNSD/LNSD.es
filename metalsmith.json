@@ -22,7 +22,8 @@
   },
   "metalsmith-permalinks": {
     "pattern": ":collection/:date/:title",
-    "date":"YYYY"
+    "date":"YYYY",
+    "relative":true
   },
   "metalsmith-templates": {
     "engine": "jade",

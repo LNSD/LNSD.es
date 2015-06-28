@@ -24,14 +24,14 @@ block body
                 .row
                     .col-lg-offset-2.col-lg-8
                         h2.text-center Recent posts
-                        hr(style="width:50%")
+                        hr
             each file in pagination.files
                 article.row
                     .col-lg-offset-2.col-lg-8
-                        header
+                        header(style="background-image: url("+file.path+"/header.jpg)").cover
                             h3
                                 a(href='/blog/' + file.path)= file.title
-                            small.header-metadata
+                            small!= 'Date: '+file.date
                                 //time.timestamp(datetime=file.date)= moment(file.date).format('MMMM D, YYYY')
                         section!= file.snippet
 
