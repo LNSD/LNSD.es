@@ -60,12 +60,37 @@
 
     .cover {
       height: 170px;
+      width: 100%;
       margin-bottom: 5px;
+      display: table;
       background: {
         size: cover;
         position: center;
         attachment: scroll;
         repeat: no-repeat;
+      }
+
+      .cover-content {
+        display: table-cell;
+        vertical-align: bottom;
+        padding: 10px 0;
+
+        .title {
+          display: inline-block;
+          padding: 5px 15px;
+          background-color: rgba(0,0,0,.7);
+          h3 a {
+              color: white;
+
+              &:hover,
+              &:focus {
+                color: $lnsd-primary-light;
+              }
+          }
+          small {
+            color: $lnsd-primary-light;
+          }
+        }
       }
     }
   }

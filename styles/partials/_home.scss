@@ -16,6 +16,7 @@ $bg-img-lg: "../assets/lnsd-antenna-bg-lg.jpg";
   @media (min-width: $screen-lg-min) { @include cover-bg($bg-img-lg, $position: center, $size: cover); }
 
   h1, h2, h3, h4, h5, h6 {
+    font-size: 28px;
     color: $lnsd-primary-light;
   }
 
@@ -32,7 +33,7 @@ $bg-img-lg: "../assets/lnsd-antenna-bg-lg.jpg";
 
   // Logo styles
   .logo {
-    height: 300px;
+    height: 250px;
 
     .logo-circle {
       fill: rgba(255, 255, 255, .25);

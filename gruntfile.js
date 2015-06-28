@@ -127,7 +127,7 @@ module.exports = function(grunt) {
         },
         metalsmith: {
             files: ['metalsmith.json', 'templates/layout.jade', 'templates/blog.jade', 'templates/post.jade', 'templates/partials/*.jade', 'content/**/*'],
-            tasks: ['metalsmith']
+            tasks: ['metalsmith', 'responsive_images:blog']
         }
     });
 
@@ -139,7 +139,7 @@ module.exports = function(grunt) {
         }
     });
 
-	grunt.registerTask('build', 'Compiles all of the source files and copies the assets to the build directory.', ['clean', 'copy', 'responsive_images', 'coffee', 'sass', 'jade']);
-    grunt.registerTask('build:all', 'Compiles all of the source files (blog included)', ['build', 'metalsmith', 'sitemap']);
+	grunt.registerTask('build', 'Compiles all of the source files and copies the assets to the build directory.', ['clean', 'copy', 'responsive_images:assets', 'coffee', 'sass', 'jade']);
+    grunt.registerTask('build:all', 'Compiles all of the source files (blog included)', ['build', 'metalsmith', 'responsive_images:blog', 'sitemap']);
 	grunt.registerTask('default', 'Compiles everything and copies it to build directory.', ['build']);
 };
