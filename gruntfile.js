@@ -103,7 +103,7 @@ module.exports = function(grunt) {
         blog: {
             expand: true,
             cwd: '<%= dirs.sources %>/',
-            src: './**/*.{gif,png,jpg,jpeg}',
+            src: ['./**/*.{gif,png,jpg,jpeg}','./**/header.jpg'],
             dest: '<%= dirs.output %>/blog/posts/'
         }
     });
