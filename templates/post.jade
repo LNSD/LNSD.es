@@ -1,0 +1,48 @@
+extends layout
+
+append vars
+    - var bodyclass = 'article'
+    //- var fullUri = blog.uri + '/' + path
+
+prepend title
+    | #{title + " • "}
+
+block body
+    body(class=bodyclass)
+        div.wrapper.cf
+            div.wrapper-border
+
+            block header
+                header.header.container
+                    small.header-metadata
+                        //time.timestamp(datetime=date)= moment(date).format('MMMM D, YYYY')
+                    h1.header-title= title
+                    div.header-more
+                        if github
+                            a.btn.btn-small.btn-github(href='https://github.com/' + github)
+                                | View on GitHub
+                        if npm
+                            a.btn.btn-small.btn-npm(href='http://npmjs.org/package/' + npm)
+                                | Install with npm
+
+            main.content.container(role='main')
+                block content
+                    article.content-article!= contents
+
+        footer.footer(role='contentinfo')
+            //a.icon-home.back-to-home(href='/', title=blog.title)
+            block footer
+                p.container
+                    | #{new Date().getFullYear()}&nbsp;&copy;&nbsp;
+                    a(href='mailto:'+author.email)= author.name
+
+
+
+
+
+
+
+
+
+
+

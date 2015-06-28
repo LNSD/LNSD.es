@@ -3,7 +3,7 @@ title: Hello world 2
 date: 2015-06-02
 author: Lorenzo Delgado
 collection: posts
-template: article.jade
+template: post.jade
 ---
 
 # This is an amazing blogpost! 

@@ -120,7 +120,7 @@ module.exports = function(grunt) {
             tasks: ['coffee']
         },
         metalsmith: {
-            files: ['metalsmith.json', 'templates/layout.jade', 'templates/blog.jade', 'templates/article.jade', 'content/**/*'],
+            files: ['metalsmith.json', 'templates/layout.jade', 'templates/blog.jade', 'templates/post.jade', 'content/**/*'],
             tasks: ['metalsmith']
         }
     });
