@@ -55,7 +55,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   margin: 0 0 25px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 300;
   text-align: justify;
 }
@@ -63,7 +63,7 @@ p {
 @media(min-width: $screen-xs-max) {
   p {
     margin: 0 0 15px;
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 

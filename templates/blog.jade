@@ -33,7 +33,8 @@ block body
                                 a(href='/blog/' + file.path)= file.title
                             small!= 'Date: '+file.date
                                 //time.timestamp(datetime=file.date)= moment(file.date).format('MMMM D, YYYY')
-                        section!= file.snippet
+                        section
+                            p!= file.snippet
 
         //nav.navigation.cf
             if pagination.previous

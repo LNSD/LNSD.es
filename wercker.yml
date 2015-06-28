@@ -8,7 +8,7 @@ build:
           node_modules/bower/bin/bower --allow-root install
     - grunt:
         fail-on-warnings: true
-        tasks: build
+        tasks: build:all
 deploy:
   steps:
     - lukevivier/gh-pages:
