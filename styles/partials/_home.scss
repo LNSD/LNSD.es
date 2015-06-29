@@ -10,7 +10,9 @@ $bg-img-lg: "../assets/lnsd-antenna-bg-lg.jpg";
   height: 100%;
 
   body {
+    height: 100%;
     background-color: $lnsd-primary-dark;
+
     @include cover-bg($bg-img-lg, $position: center, $size: cover);
     @media (max-width: $screen-xs-max) {
       @include cover-bg($bg-img-xs, $position: center, $size: cover);
@@ -26,12 +28,15 @@ $bg-img-lg: "../assets/lnsd-antenna-bg-lg.jpg";
     }
   }
 
+  main { height: 100%; }
+
   h1, h2, h3, h4, h5, h6 {
     font-size: 28px;
     color: $lnsd-primary-light;
   }
 
   p {
+    color: $lnsd-primary-light;
     text-align: center;
     &:last-of-type {
       margin: 0;
@@ -79,7 +84,8 @@ $bg-img-lg: "../assets/lnsd-antenna-bg-lg.jpg";
     }
   }
 
-  #photo-credit {
+  #photo-cred
+t {
     font-size: 12px;
     font-weight: 300;
     text-align: right;

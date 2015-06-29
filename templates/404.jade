@@ -11,17 +11,17 @@ append styles
     link(href='http://fonts.googleapis.com/css?family=Press+Start+2P', rel='stylesheet', type='text/css')
 
 block body
-    body.full-height
-        header.container-fluid.full-height.full-width.display-table
-                .row
-                    .col-lg-offset-4.col-lg-4.text-center
-                        h1.huge 404
-                        h3 Page not found
-                        p
-                            |I could not find the page you were looking for in this server.
-                            |If you think there is something wrong with this, please email me to
-                            a(href="mailto:lorenzo.delgado@lnsd.es")!=' lorenzo.delgado@lnsd.es'
+    body
+        .container-fluid.full-height.full-width.display-table
+            .row
+                .col-lg-offset-4.col-lg-4.text-center
+                    h1.huge 404
+                    h3 Page not found
+                    p
+                        |I could not find the page you were looking for in this server.
+                        |If you think there is something wrong with this, please email me to
+                        a(href="mailto:lorenzo.delgado@lnsd.es")!=' lorenzo.delgado@lnsd.es'
 
-                        nav.text-center
-                            li
-                                a(href="/") Return to home
+                    nav
+                        li
+                            a(href="/") Return to home

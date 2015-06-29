@@ -3,6 +3,8 @@
 .not-found {
   height: 100%;
 
+  body { height: 100%; }
+
   h1, h3 {
     font-family: $eightbit-font-family;
   }
