@@ -1,7 +1,7 @@
 extends blog
 
-prepend title
-    | #{title + " • "}
+block title
+    = title + " • " + name
 
 block content
     section.container
@@ -13,16 +13,23 @@ block content
                             h2!= title
                             small
                                 time.timestamp(datetime=date)= moment(date).format('MMMM D, YYYY')
+        .row
+            .col-lg-offset-2.col-lg-8
+                main.content!= contents
+                .row
+        .col-lg-offset-2.col-lg-8
+            .social
+                p.text-center.text-uppercase &lt;&nbsp;Social icons come here&nbsp;&gt;
+        .row
+            .col-lg-offset-2.col-lg-8
+                .comments
+                    #disqus_thread
 
-                main.content-article!= contents
-
-
-
-
-
-
-
-
-
-
-
+append scripts
+    script.
+        //- Disqus code snippet
+        (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//#{name}.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();

@@ -1,7 +1,6 @@
 ---
 title: Hello world 3
 date: 2015-06-03
-author: Lorenzo Delgado
 collection: posts
 template: post.jade
 ---

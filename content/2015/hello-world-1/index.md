@@ -1,7 +1,6 @@
 ---
 title: Hello world 1
 date: 2015-06-01
-author: Lorenzo Delgado
 collection: posts
 template: post.jade
 ---

@@ -7,8 +7,8 @@ append vars
 append head
     base(href=urlbase)
 
-prepend title
-    | #{ ((!title)?'Blog':title) + " • "}
+block title
+    = "Blog" + " • " + name
 
 block body
     body
@@ -83,7 +83,8 @@ block body
 
 
         // JavaScript
-        script(src='../js/vendor/jquery.min.js')
-        script(src='../js/vendor/moment.min.js')
-        script(src='../js/main.js')
+        block scripts
+            script(src='../js/vendor/jquery.min.js')
+            script(src='../js/vendor/moment.min.js')
+            script(src='../js/main.js')
 

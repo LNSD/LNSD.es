@@ -1,7 +1,6 @@
 ---
 title: Hello world 4
 date: 2015-06-04
-author: Lorenzo Delgado
 collection: posts
 template: post.jade
 ---

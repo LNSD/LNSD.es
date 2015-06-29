@@ -9,6 +9,9 @@ $footer-height: 55px;
   body {
     margin-bottom: $footer-height;
   }
+
+  h2 { margin-bottom: 12px; }
+  p { margin-bottom: 0; }
   
   // Logo styles
   .logo {
@@ -54,12 +57,7 @@ $footer-height: 55px;
     }
   }
 
-  h2 { margin-bottom: 12px; }
-  hr {
-    width: 20%;
-    margin-top: 0;
-    margin-bottom: 12px;
-  }
+
 
   .list-item {
     margin-top: 10px;
@@ -126,6 +124,19 @@ $footer-height: 55px;
     }
   }
 
+  .content {
+    margin-bottom: 15px;
+  }
+
+  .social {
+
+  }
+
+  .comments {
+    padding: 0 10px;
+    margin-bottom: 0px;
+  }
+
   .footer {
     position: absolute;
     bottom: 0;
@@ -133,7 +144,7 @@ $footer-height: 55px;
     right: 0;
     height: $footer-height;
 
-    hr {width: 80%}
+    hr {width: 100%}
 
     .content {
       background-color: $lnsd-primary-dark;

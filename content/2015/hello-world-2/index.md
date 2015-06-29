@@ -1,7 +1,6 @@
 ---
 title: Hello world 2
 date: 2015-06-02
-author: Lorenzo Delgado
 collection: posts
 template: post.jade
 ---
