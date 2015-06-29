@@ -7,7 +7,7 @@
   },
   "metalsmith-collections-paginate": {
     "posts": {
-      "perPage": 3,
+      "perPage": 5,
       "template": "blog.jade",
       "first": "index.html"
     }
