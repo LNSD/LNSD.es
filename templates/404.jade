@@ -2,7 +2,7 @@
 extends layout
 
 append vars
-    - var bodyclass = 'not-found';
+    - var style = 'not-found';
 
 prepend title
     | #{"404 Page not found" + " • "}
@@ -11,7 +11,7 @@ append styles
     link(href='http://fonts.googleapis.com/css?family=Press+Start+2P', rel='stylesheet', type='text/css')
 
 block body
-    body(class=bodyclass)#top.full-height
+    body.full-height
         header.container-fluid.full-height.full-width.display-table
                 .row
                     .col-lg-offset-4.col-lg-4.text-center

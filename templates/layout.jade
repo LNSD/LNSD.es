@@ -1,7 +1,7 @@
+//- Base template
 doctype html
 block vars
-
-html(lang='en')
+html(lang='en', class=style)
     head
         block head
             meta(charset='utf-8')
@@ -9,12 +9,11 @@ html(lang='en')
             meta(name='viewport', content='width=device-width')
             meta(name='description', content=desc)
             meta(name='author', content=author.name+' <'+author.email+'>')
-            //base(href= "http://lnsd.es/"+urlbase)
             title
                 block title
                     = name
 
-            //- link(rel='alternate', href='/feed.xml', type='application/rss+xml', title=blog.description)
+            //- TODO link(rel='alternate', href='/feed.xml', type='application/rss+xml', title=blog.description)
 
             // Styling
             block styles

@@ -2,14 +2,14 @@
 extends layout
 
 append vars
-    - var bodyclass = 'home';
+    - var style = 'home';
     - var bg_photo_credit = { name: "S Hassler", url: 'https://www.flickr.com/photos/sh485/' }
 
 append javascript
     script(src='js/vendor/jquery.min.js')
 
 block body
-    body(class=bodyclass)#top.full-height.font-light
+    body.full-height.font-light
         header.height-95
             .container.full-height.display-table
                 .row

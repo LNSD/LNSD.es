@@ -1,8 +1,9 @@
 @import "../base";
 
 .not-found {
-  h1, .h1,
-  h3, .h3 {
+  height: 100%;
+
+  h1, h3 {
     font-family: $eightbit-font-family;
   }
 

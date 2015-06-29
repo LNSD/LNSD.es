@@ -1,7 +1,7 @@
-//Blog index (blog/index.html)
+//- Blog index (blog/index.html)
 extends layout
 append vars
-    - var bodyclass = 'blog';
+    - var style = 'blog';
     - var urlbase = '/blog/';
 
 append head
@@ -11,7 +11,7 @@ prepend title
     | #{ ((!title)?'Blog':title) + " • "}
 
 block body
-    body(class=bodyclass)
+    body
         header.container
             .row
                 .col-lg-offset-3.col-lg-6
@@ -33,11 +33,10 @@ block body
 
         block content
             section.container
-                header
-                    .row
-                        .col-lg-offset-2.col-lg-8
-                            h2.text-center Recent posts
-                            hr
+                header.row
+                    .col-lg-offset-2.col-lg-8
+                        h2.text-center Recent posts
+                        hr
                 each file in pagination.files
                     article.row
                         .list-item.col-lg-offset-2.col-lg-8
@@ -48,7 +47,7 @@ block body
                                             a(href='/blog/' + file.path)= file.title
                                         small
                                             time.timestamp(datetime=file.date)= moment(file.date).format('MMMM D, YYYY')
-                            section
+                            main
                                 p!= (!file.brief)?file.snippet:file.brief
 
             if(pagination.next || pagination.previous)
@@ -65,19 +64,22 @@ block body
                                     | newer&nbsp;&nbsp;
                                     i.fa.fa-angle-double-right
         block footer
-            footer.container.font-light
+            footer.footer.container.font-light
                 //- TODO Footer content
                 .row
                     .col-lg-offset-2.col-lg-8
                         hr
                 //.row
-                    .col-lg-offset-2.col-lg-4.content
-                        p.text-center Footer content left
-                    .col-lg-4.content
-                        p.text-center Footer content right
+                    .col-lg-offset-2.col-lg-4
+                        .content
+                            p.text-center Footer content left
+                    .col-lg-4
+                        .content
+                            p.text-center Footer content right
                 .row
-                    .col-lg-offset-2.col-lg-8.content
-                        p.text-center!= moment(Date.now()).format('YYYY')+'&nbsp;&copy;&nbsp;'+author.name
+                    .col-lg-offset-2.col-lg-8
+                        .content
+                            p.text-center!= moment(Date.now()).format('YYYY')+'&nbsp;&copy;&nbsp;'+author.name
 
 
         // JavaScript
