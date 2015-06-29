@@ -13,16 +13,21 @@ module.exports = function(grunt) {
 				bootstrap: 'bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js',
 				jquery: 'bower_components/jquery/dist/jquery.min.js',
                 moment: 'bower_components/moment/min/moment.min.js'
-			}
+			},
+            fonts: {
+                fa: 'bower_components/components-font-awesome/fonts/'
+            }
+
 		},
 
 		// Grunt build tasks
 		clean: ['<%= dirs.output %>'],
 		copy: {
 			assets: { src: ['assets/*', '!assets/favicon.ico', '!assets/*.{guf,png,jpg,jpeg}'], dest:'<%= dirs.output %>/assets/', expand: true, flatten: true },
-			favicon: { src: 'assets/favicon.ico', dest: '<%= dirs.output %>/', expand: true, flatten: true },
-			bootstrap: { src: '<%= bower.js.bootstrap %>', dest: '<%= dirs.output %>/js/vendor/', expand: true, flatten: true },
-			jquery: { src: '<%= bower.js.jquery %>', dest: '<%= dirs.output %>/js/vendor/', expand: true, flatten: true },
+			favicon: { src: 'assets/favicon.ico', dest: '<%= dirs.output %>/fonts/', expand: true, flatten: true },
+            fawesome: { src: '<%= bower.fonts.fa %>/*.{eot,svg,ttf,woff,woff2}', dest: '<%= dirs.output %>/assets/fonts/', expand: true, flatten: true },
+            bootstrap: { src: '<%= bower.js.bootstrap %>', dest: '<%= dirs.output %>/js/vendor/', expand: true, flatten: true },
+            jquery: { src: '<%= bower.js.jquery %>', dest: '<%= dirs.output %>/js/vendor/', expand: true, flatten: true },
             moment: { src: '<%= bower.js.moment %>', dest: '<%= dirs.output %>/js/vendor/', expand: true, flatten: true }
 		},
 		jade: {
@@ -128,7 +133,7 @@ module.exports = function(grunt) {
         },
         metalsmith: {
             files: ['metalsmith.json', 'templates/layout.jade', 'templates/blog.jade', 'templates/post.jade', 'templates/partials/*.jade', 'content/**/*'],
-            tasks: ['metalsmith', 'responsive_images:blog']
+            tasks: ['metalsmith']
         }
     });
 

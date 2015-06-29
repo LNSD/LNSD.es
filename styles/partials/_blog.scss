@@ -63,7 +63,7 @@
     .cover {
       height: 170px;
       width: 100%;
-      margin-bottom: 5px;
+      margin-bottom: 12px;
       display: table;
       background: {
         size: cover;
@@ -95,5 +95,39 @@
     }
 
     section p { margin-bottom: 0; }
+  }
+
+  .navigation {
+    border: none;
+    padding-bottom: 8px;
+
+    hr {
+      width: 90%;
+      margin-bottom: 8px;
+    }
+
+    a {
+      margin: 0 25px;
+      padding: 7px 20px;
+      text-transform: capitalize;
+
+      &:hover,
+      &:focus {
+        color: $lnsd-primary-dark;
+        background-color: $lnsd-primary-light;
+      }
+    }
+  }
+
+  footer {
+    hr {width: 80%}
+
+    .content {
+      background-color: $lnsd-primary-dark;
+      p {
+        padding: 10px;
+        margin-bottom: 0;
+      }
+    }
   }
 }

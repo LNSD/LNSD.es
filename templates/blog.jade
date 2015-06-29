@@ -2,10 +2,13 @@
 extends layout
 append vars
     - var bodyclass = 'blog';
+    - var urlbase = '/blog/';
 
-append javascript
-    script(src='../js/vendor/jquery.min.js')
-    script(src='../js/vendor/moment.min.js')
+append head
+    base(href=urlbase)
+
+prepend title
+    | #{ ((!title)?'Blog':title) + " • "}
 
 block body
     body(class=bodyclass)
@@ -16,8 +19,18 @@ block body
                     .text-logo
                         h1.text-logo LNSD
             .row
-                .col-lg-offset-3.col-lg-6
-                    include partials/nav
+                .col-lg-offset-2.col-lg-8
+                    nav
+                        ul
+                            li
+                                a(href="/") home
+                            li
+                                a(href="/resume") resume
+                            li
+                                a(href="/blog") blog
+                            li
+                                a(href="/contact") contact
+
         block content
             section.container
                 header
@@ -28,7 +41,7 @@ block body
                 each file in pagination.files
                     article.row
                         .list-item.col-lg-offset-2.col-lg-8
-                            header(style="background-image: url("+file.path+"/header-sm.jpg)").cover
+                            header(style="background-image: url("+file.path+"/header.jpg)").cover
                                 .cover-content
                                     .title
                                         h3
@@ -38,16 +51,37 @@ block body
                             section
                                 p!= (!file.brief)?file.snippet:file.brief
 
-            //nav.navigation.cf
-                if pagination.previous
-                    a.btn.pull-right(href='/blog/' + pagination.previous.path)
-                        | Newer&nbsp;&nbsp;
-                        i.icon-right-dir
-                if pagination.next
-                    a.btn.pull-left(href='/blog/' + pagination.next.path)
-                        i.icon-left-dir
-                        | &nbsp;&nbsp;Older
+            if(pagination.next || pagination.previous)
+                nav.navigation.container
+                    .row
+                        .col-lg-offset-3.col-lg-6
+                            hr
+                            if pagination.next
+                                a(href='/blog/' + pagination.next.path).pull-left.btn
+                                    i.fa.fa-angle-double-left
+                                    | &nbsp;&nbsp;older
+                            if pagination.previous
+                                a(href='/blog/' + pagination.previous.path).pull-right.btn
+                                    | newer&nbsp;&nbsp;
+                                    i.fa.fa-angle-double-right
+        block footer
+            footer.container.font-light
+                //- TODO Footer content
+                .row
+                    .col-lg-offset-2.col-lg-8
+                        hr
+                //.row
+                    .col-lg-offset-2.col-lg-4.content
+                        p.text-center Footer content left
+                    .col-lg-4.content
+                        p.text-center Footer content right
+                .row
+                    .col-lg-offset-2.col-lg-8.content
+                        p.text-center!= moment(Date.now()).format('YYYY')+'&nbsp;&copy;&nbsp;'+author.name
+
 
         // JavaScript
+        script(src='../js/vendor/jquery.min.js')
+        script(src='../js/vendor/moment.min.js')
         script(src='../js/main.js')
 

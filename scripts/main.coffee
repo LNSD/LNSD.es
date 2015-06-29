@@ -1,5 +1,5 @@
 # Asynchronously load the svg logo
-$('.logo').load '/assets/lnsd-big-logo.svg'
+$('.logo').load '../assets/lnsd-big-logo.svg'
 
 # Show post date using moment
 $('.timestamp').each ->
