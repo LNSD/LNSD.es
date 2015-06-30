@@ -2,6 +2,9 @@ extends blog
 append vars
     - var fullUri = baseuri + '/blog/' + path
 
+append head
+    meta(property='og:image', content=fullUri+'/header.jpg')
+
 block title
     = title + " • " + name
 
@@ -31,19 +34,19 @@ block content
                                 i.fa.fa-envelope
                                 | &nbsp;Email
                         li
-                            a(href='https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(title), class='popup').facebook
+                            a(href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(title), target='_blank', class='popup').facebook
                                 i.fa.fa-facebook
                                 | &nbsp;Facebook
                         li
-                            a(href='http://twitter.com/home?status=' + encodeURIComponent(title + ' ' + fullUri), class='popup').twitter
+                            a(href='http://twitter.com/home?status='+encodeURIComponent(title+' — '+fullUri), target='_blank', class='popup').twitter
                                 i.fa.fa-twitter
                                 | &nbsp;Twitter
                         li
-                            a(href='http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(fullUri) + '&title=' + encodeURIComponent(title), class='popup').linkedin
+                            a(href='http://www.linkedin.com/shareArticle?mini=true&url='+encodeURIComponent(fullUri)+'&title='+encodeURIComponent(title), target='_blank', class='popup').linkedin
                                 i.fa.fa-linkedin
                                 | &nbsp;LinkedIn
                         li
-                            a(href='https://plus.google.com/share?url=' + encodeURIComponent(fullUri), class='popup').google-plus
+                            a(href='https://plus.google.com/share?url=' + encodeURIComponent(fullUri), target='_blank', class='popup').google-plus
                                 i.fa.fa-google-plus
                                 | &nbsp;Google+
         .row
@@ -51,11 +54,11 @@ block content
                 .comments
                     #disqus_thread
 
-append scripts
+prepend scripts
     script.
         //- Disqus code snippet
         (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//#{name}.disqus.com/embed.js';
+        dsq.src = '//#{disqus}.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         })();
