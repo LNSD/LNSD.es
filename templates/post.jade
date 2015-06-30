@@ -2,8 +2,8 @@ extends blog
 append vars
     - var fullUri = baseuri + '/blog/' + path
 
-append head
-    meta(property='og:image', content=fullUri+'/header.jpg')
+append meta
+    meta(property='og:image', content=fullUri+'/header-fb.jpg')
 
 block title
     = title + " • " + name

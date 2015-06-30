@@ -95,25 +95,50 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-responsive-images');
     grunt.config('responsive_images', {
         options: {
-            engine:'im',
-            sizes: [
-                { name: 'xs', width: 480 },
-                { name: 'sm', width: 768 },
-                { name: 'md', width: 992 },
-                { name: "lg", width: 1200 }
-            ]
+            engine:'im'
         },
         assets: {
-            src: 'assets/*.{gif,png,jpg,jpeg}',
-            dest:'<%= dirs.output %>/assets/',
-            expand: true,
-            flatten: true
+            options: {
+                sizes: [
+                    { name: 'xs', width: 480 },
+                    { name: 'sm', width: 768 },
+                    { name: 'md', width: 992 },
+                    { name: "lg", width: 1200 }
+                ]
+            },
+            files: [{
+                src: 'assets/*.{gif,png,jpg,jpeg}',
+                dest:'<%= dirs.output %>/assets/',
+                expand: true,
+                flatten: true
+            }]
         },
         blog: {
-            expand: true,
-            cwd: '<%= dirs.sources %>/',
-            src: './**/*.{gif,png,jpg,jpeg}',
-            dest: '<%= dirs.output %>/blog/posts/'
+            options: {
+                sizes: [
+                    { name: 'xs', width: 480 },
+                    { name: 'sm', width: 768 },
+                    { name: 'md', width: 992 },
+                    { name: "lg", width: 1200 }
+                ]
+            },
+            files: [{
+                expand: true,
+                cwd: '<%= dirs.sources %>/',
+                src: ['./**/*.{gif,png,jpg,jpeg}', '!./**/header.{jpg,jpeg}'],
+                dest: '<%= dirs.output %>/blog/posts/'
+            }]
+        },
+        fbshare: {
+            options: {
+                sizes: [{ name: 'fb', width: 200, height: 200, aspectRatio: false }]
+            },
+            files: [{
+                expand: true,
+                cwd: '<%= dirs.sources %>/',
+                src: ['./**/header.{jpg,jpeg}'],
+                dest: '<%= dirs.output %>/blog/posts/'
+            }]
         }
     });
 
@@ -149,6 +174,6 @@ module.exports = function(grunt) {
     });
 
 	grunt.registerTask('build', 'Compiles all of the source files and copies the assets to the build directory.', ['clean', 'copy', 'responsive_images:assets', 'coffee', 'sass', 'jade']);
-    grunt.registerTask('build:all', 'Compiles all of the source files (blog included)', ['build', 'metalsmith', 'responsive_images:blog', 'sitemap']);
+    grunt.registerTask('build:all', 'Compiles all of the source files (blog included)', ['build', 'metalsmith', 'responsive_images:blog', 'responsive_images:fbshare', 'sitemap']);
 	grunt.registerTask('default', 'Compiles everything and copies it to build directory.', ['build']);
 };
