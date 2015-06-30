@@ -37,26 +37,6 @@ $footer-height: 55px;
     text-align: center;
   }
 
-  header nav {
-    padding: { top: 8px; bottom: 12px; };
-    margin-bottom: 25px;
-
-    li {
-      &::after {
-        font-size: 20px;
-        color: rgba(0, 0, 0, 0.15);
-      }
-
-      a {
-        padding: 0 45px;
-        &:hover,
-        &:focus {
-          background-color: transparent;
-        }
-      }
-    }
-  }
-
   .list-item {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -136,6 +116,7 @@ $footer-height: 55px;
 
       li {
         display: inline-block;
+
         span, a {
           font-family: $body-font-family;
           color: $lnsd-primary-dark;

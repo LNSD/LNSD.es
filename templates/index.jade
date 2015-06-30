@@ -5,55 +5,34 @@ append vars
     - var style = 'home';
     - var bg_photo_credit = { name: "S Hassler", url: 'https://www.flickr.com/photos/sh485/' }
 
-append javascript
-    script(src='js/vendor/jquery.min.js')
-
 block body
-    body.full-height.font-light
-        section.height-95
-            .container.full-height.display-table
-                .row
-                    .col-lg-offset-3.col-lg-6
-                        .logo
-                        h1.text-logo LNSD
+    .container.vertical-alignment
+        .row
+            .col-lg-12
+                .logo
+                h1.text-logo LNSD
 
-                        #info
-                            h2.text-center Lorenzo Delgado Antequera
-                            p.text-center Electronics &amp; Telecommunications Engineer
+                #info
+                    h2.text-center Lorenzo Delgado Antequera
+                    p.text-center Electronics &amp; Telecommunications Engineer
 
-                        nav
-                            ul
-                                li
-                                    a(href="/resume") resume
-                                li
-                                    a(href="/blog") blog
-                                li
-                                    a(href="/contact") contact
+                nav
+                    ul
+                        li
+                            a(href="/resume") resume
+                        li
+                            a(href="/blog") blog
+                        li
+                            a(href="/contact") contact
 
-        footer.height-5
-            .container-fluid
-                .row
-                    .col-lg-offset-10.col-lg-2
-                        #photo-credit.font-light
-                            a(href=bg_photo_credit.url)!="Photo Credit: "+bg_photo_credit.name
+    //footer.height-5
+        .container-fluid
+            .row
+                .col-lg-offset-10.col-lg-2
+                    #photo-credit.font-light
+                        a(href=bg_photo_credit.url)!="Photo Credit: "+bg_photo_credit.name
 
-        // JavaScript
-        script(src='js/main.js')
-        if analytics
-            script.
-                (function (i, s, o, g, r, a, m) {
-                    i['GoogleAnalyticsObject'] = r;
-                    i[r] = i[r] || function () {
-                                (i[r].q = i[r].q || []).push(arguments)
-                            }, i[r].l = 1 * new Date();
-                    a = s.createElement(o),
-                            m = s.getElementsByTagName(o)[0];
-                    a.async = 1;
-                    a.src = g;
-                    m.parentNode.insertBefore(a, m)
-                })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-                ga('create', '#{analytics}', 'auto');
-                ga('require', 'displayfeatures');
-                ga('send', 'pageview');
+    // JavaScript
+    script(src='js/vendor/jquery.min.js')
+    script(src='js/main.js')
 

@@ -10,100 +10,81 @@ append head
 block title
     = "Blog" + " • " + name
 
-block body
-    body
-        header.container
+block header
+    header.container
+        .row
+            .col-lg-offset-3.col-lg-6
+                .logo
+                .text-logo
+                    h1.text-logo LNSD
+        .row
+            .col-lg-offset-2.col-lg-8
+                nav
+                    ul
+                        li
+                            a(href="/") home
+                        li
+                            a(href="/resume") resume
+                        li
+                            a(href="/blog") blog
+                        li
+                            a(href="/contact") contact
+
+block content
+    section.container
+        header.row
+            .col-lg-offset-2.col-lg-8
+                h2.text-center Recent posts
+                hr
+        each file in pagination.files
+            article.row
+                .list-item.col-lg-offset-2.col-lg-8
+                    header(style="background-image: url("+file.path+"/header.jpg)").cover
+                        .cover-content
+                            .title
+                                h3
+                                    a(href='/blog/' + file.path)= file.title
+                                small
+                                    time.timestamp(datetime=file.date)= moment(file.date).format('MMMM D, YYYY')
+                    main
+                        p!= (!file.brief)?file.snippet:file.brief
+
+    if(pagination.next || pagination.previous)
+        nav.navigation.container
             .row
                 .col-lg-offset-3.col-lg-6
-                    .logo
-                    .text-logo
-                        h1.text-logo LNSD
-            .row
-                .col-lg-offset-2.col-lg-8
-                    nav
-                        ul
-                            li
-                                a(href="/") home
-                            li
-                                a(href="/resume") resume
-                            li
-                                a(href="/blog") blog
-                            li
-                                a(href="/contact") contact
+                    hr
+                    if pagination.next
+                        a(href='/blog/' + pagination.next.path).pull-left.btn
+                            i.fa.fa-angle-double-left
+                            | &nbsp;&nbsp;older
+                    if pagination.previous
+                        a(href='/blog/' + pagination.previous.path).pull-right.btn
+                            | newer&nbsp;&nbsp;
+                            i.fa.fa-angle-double-right
 
-        block content
-            section.container
-                header.row
-                    .col-lg-offset-2.col-lg-8
-                        h2.text-center Recent posts
-                        hr
-                each file in pagination.files
-                    article.row
-                        .list-item.col-lg-offset-2.col-lg-8
-                            header(style="background-image: url("+file.path+"/header.jpg)").cover
-                                .cover-content
-                                    .title
-                                        h3
-                                            a(href='/blog/' + file.path)= file.title
-                                        small
-                                            time.timestamp(datetime=file.date)= moment(file.date).format('MMMM D, YYYY')
-                            main
-                                p!= (!file.brief)?file.snippet:file.brief
-
-            if(pagination.next || pagination.previous)
-                nav.navigation.container
-                    .row
-                        .col-lg-offset-3.col-lg-6
-                            hr
-                            if pagination.next
-                                a(href='/blog/' + pagination.next.path).pull-left.btn
-                                    i.fa.fa-angle-double-left
-                                    | &nbsp;&nbsp;older
-                            if pagination.previous
-                                a(href='/blog/' + pagination.previous.path).pull-right.btn
-                                    | newer&nbsp;&nbsp;
-                                    i.fa.fa-angle-double-right
-        block footer
-            footer.footer.container.font-light
-                //- TODO Footer content
-                .row
-                    .col-lg-offset-2.col-lg-8
-                        hr
-                //.row
-                    .col-lg-offset-2.col-lg-4
-                        .content
-                            p.text-center Footer content left
-                    .col-lg-4
-                        .content
-                            p.text-center Footer content right
-                .row
-                    .col-lg-offset-2.col-lg-8
-                        .content
-                            p.text-center!= moment(Date.now()).format('YYYY')+'&nbsp;&copy;&nbsp;'+author.name
+block footer
+    footer.footer.container.font-light
+        //- TODO Footer content
+        .row
+            .col-lg-offset-2.col-lg-8
+                hr
+        //.row
+            .col-lg-offset-2.col-lg-4
+                .content
+                    p.text-center Footer content left
+            .col-lg-4
+                .content
+                    p.text-center Footer content right
+        .row
+            .col-lg-offset-2.col-lg-8
+                .content
+                    p.text-center!= moment(Date.now()).format('YYYY')+'&nbsp;&copy;&nbsp;'+author.name
 
 
-        // JavaScript
-        block scripts
-            if analytics
-                script.
-                    (function (i, s, o, g, r, a, m) {
-                        i['GoogleAnalyticsObject'] = r;
-                        i[r] = i[r] || function () {
-                                    (i[r].q = i[r].q || []).push(arguments)
-                                }, i[r].l = 1 * new Date();
-                        a = s.createElement(o),
-                                m = s.getElementsByTagName(o)[0];
-                        a.async = 1;
-                        a.src = g;
-                        m.parentNode.insertBefore(a, m)
-                    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-                    ga('create', '#{analytics}', 'auto');
-                    ga('require', 'displayfeatures');
-                    ga('send', 'pageview');
-
-            script(src='../js/vendor/jquery.min.js')
-            script(src='../js/vendor/moment.min.js')
-            script(src='../js/main.js')
+append scripts
+    script(src='../js/vendor/jquery.min.js')
+    script(src='../js/vendor/moment.min.js')
+    script(src='../js/main.js')
 
 
