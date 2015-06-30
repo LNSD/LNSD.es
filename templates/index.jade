@@ -25,12 +25,8 @@ block body
                         li
                             a(href="/contact") contact
 
-    //footer.height-5
-        .container-fluid
-            .row
-                .col-lg-offset-10.col-lg-2
-                    #photo-credit.font-light
-                        a(href=bg_photo_credit.url)!="Photo Credit: "+bg_photo_credit.name
+    #photo-credit
+        a(href=bg_photo_credit.url)!="Photo credit: "+bg_photo_credit.name
 
     // JavaScript
     script(src='js/vendor/jquery.min.js')

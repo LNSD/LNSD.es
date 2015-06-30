@@ -7,7 +7,6 @@
 
 /* Partial imports */
 @import "partials/reset";
-@import "partials/fullscreen";
 @import "partials/alingment";
 @import "partials/home";
 @import "partials/404";
@@ -81,7 +80,7 @@ nav {
     display: inline-block;
     padding: { 
       top: 14px;
-      bottom: 15px;
+      bottom: 13px;
       left: 5px;
       right: 5px;
     };

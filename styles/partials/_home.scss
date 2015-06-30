@@ -42,6 +42,7 @@ $bg-img-lg: "../assets/lnsd-antenna-bg-lg.jpg";
   p {
     color: $lnsd-primary-light;
     text-align: center;
+    font-size: 18px;
     &:last-of-type {
       margin: 0;
     }
@@ -82,7 +83,18 @@ $bg-img-lg: "../assets/lnsd-antenna-bg-lg.jpg";
   }
 
   #photo-credit {
-    font-size: 12px;
-    font-weight: 300;
+    position: fixed;
+    right: 25px;
+    bottom: 15px;
+
+      a {
+        font-size: 12px;
+        font-weight: 100;
+
+        &:hover,
+        &:focus {
+          color: white;
+        }
+      }
   }
 }
