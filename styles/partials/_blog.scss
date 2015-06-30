@@ -57,8 +57,6 @@ $footer-height: 55px;
     }
   }
 
-
-
   .list-item {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -124,17 +122,77 @@ $footer-height: 55px;
     }
   }
 
-  .content {
-    margin-bottom: 15px;
-  }
+  .content { }
 
   .social {
+    padding: 0 10px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    text-align: center;
 
+    ul {
+      list-style-type: none;
+      display: inline-block;
+
+      li {
+        display: inline-block;
+        span, a {
+          font-family: $body-font-family;
+          color: $lnsd-primary-dark;
+          font-weight: 300;
+          padding: 8px 12px;
+        }
+        a {
+          border-top: 1px solid $lnsd-primary-light;
+          border-bottom: 1px solid $lnsd-primary-light;
+        }
+
+        .email {
+          &:hover,
+          &:focus {
+            color: white;
+            font-weight: 400;
+            background-color: #2ECC71;
+          }
+        }
+        .facebook {
+          &:hover,
+          &:focus {
+            color: white;
+            font-weight: 400;
+            background-color: #3B5998;
+          }
+        }
+        .twitter {
+          &:hover,
+          &:focus {
+            color: white;
+            font-weight: 400;
+            background-color: #55ACEE;
+          }
+        }
+        .google-plus {
+          &:hover,
+          &:focus {
+            color: white;
+            font-weight: 400;
+            background-color: #D34836;
+          }
+        }
+        .linkedin {
+          &:hover,
+          &:focus {
+            color: white;
+            font-weight: 400;
+            background-color: #007BB6;
+          }
+        }
+      }
+    }
   }
 
   .comments {
-    padding: 0 10px;
-    margin-bottom: 0px;
+    padding: 0 5px;
   }
 
   .footer {
@@ -144,7 +202,10 @@ $footer-height: 55px;
     right: 0;
     height: $footer-height;
 
-    hr {width: 100%}
+    hr {
+      width: 100%;
+      margin-top: 3px;
+    }
 
     .content {
       background-color: $lnsd-primary-dark;

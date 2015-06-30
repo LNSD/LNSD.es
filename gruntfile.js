@@ -80,6 +80,7 @@ module.exports = function(grunt) {
                     name: "<%= pkg.name %>",
                     desc: "<%= pkg.description %>",
                     author: "<%= pkg.author %>",
+                    baseuri: "<%= pkg.homepage %>",
                     moment: require('moment')
                 },
                 plugins: grunt.file.readJSON('metalsmith.json')

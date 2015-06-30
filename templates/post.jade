@@ -1,4 +1,6 @@
 extends blog
+append vars
+    - var fullUri = baseuri + '/blog/' + path
 
 block title
     = title + " • " + name
@@ -16,10 +18,34 @@ block content
         .row
             .col-lg-offset-2.col-lg-8
                 main.content!= contents
-                .row
-        .col-lg-offset-2.col-lg-8
-            .social
-                p.text-center.text-uppercase &lt;&nbsp;Social icons come here&nbsp;&gt;
+        .row
+            .col-lg-offset-2.col-lg-8
+                .social
+                    ul
+                        li
+                            span
+                                i.fa.fa-share-alt
+                                | &nbsp;&nbsp;Share via:
+                        li
+                            a(href='mailto:?subject=' + title + '&body=' + fullUri).email
+                                i.fa.fa-envelope
+                                | &nbsp;Email
+                        li
+                            a(href='https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(title), class='popup').facebook
+                                i.fa.fa-facebook
+                                | &nbsp;Facebook
+                        li
+                            a(href='http://twitter.com/home?status=' + encodeURIComponent(title + ' ' + fullUri), class='popup').twitter
+                                i.fa.fa-twitter
+                                | &nbsp;Twitter
+                        li
+                            a(href='http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(fullUri) + '&title=' + encodeURIComponent(title), class='popup').linkedin
+                                i.fa.fa-linkedin
+                                | &nbsp;LinkedIn
+                        li
+                            a(href='https://plus.google.com/share?url=' + encodeURIComponent(fullUri), class='popup').google-plus
+                                i.fa.fa-google-plus
+                                | &nbsp;Google+
         .row
             .col-lg-offset-2.col-lg-8
                 .comments
