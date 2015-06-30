@@ -11,9 +11,9 @@ append styles
     link(href='http://fonts.googleapis.com/css?family=Press+Start+2P', rel='stylesheet', type='text/css')
 
 block body
-    .container-fluid.full-height.full-width.display-table
+    .container.vertical-alignment
         .row
-            .col-lg-offset-4.col-lg-4.text-center
+            .col-lg-offset-4.col-lg-4
                 h1.huge 404
                 h3 Page not found
                 p
@@ -22,5 +22,8 @@ block body
                     a(href="mailto:lorenzo.delgado@lnsd.es")!=' lorenzo.delgado@lnsd.es'
 
                 nav
-                    li
-                        a(href="/") Return to home
+                    ul
+                        li
+                            a(href="/")
+                                i.fa.fa-mail-reply
+                                | &nbsp;&nbsp;Return to home

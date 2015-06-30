@@ -4,8 +4,11 @@
   height: 100%;
 
   body { height: 100%; }
+  .container { height: 100%; }
+
 
   h1, h3 {
+    text-align: center;
     font-family: $eightbit-font-family;
   }
 
@@ -13,11 +16,9 @@
     text-align: center;
   }
 
-  nav {
-    display: inline-block;
-
-    li a {
-      padding: 15px 35px;
+  nav li a {
+    &:hover, &:focus {
+      background-color: transparent;
     }
   }
 }

@@ -32,23 +32,23 @@ block content
                         li
                             a(href='mailto:?subject=' + title + '&body=' + fullUri).email
                                 i.fa.fa-envelope
-                                | &nbsp;Email
+                                | &nbsp;&nbsp;&nbsp;Email
                         li
                             a(href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(title), target='_blank', class='popup').facebook
                                 i.fa.fa-facebook
-                                | &nbsp;Facebook
+                                | &nbsp;&nbsp;&nbsp;Facebook
                         li
                             a(href='http://twitter.com/home?status='+encodeURIComponent(title+' — '+fullUri), target='_blank', class='popup').twitter
                                 i.fa.fa-twitter
-                                | &nbsp;Twitter
+                                | &nbsp;&nbsp;&nbsp;Twitter
                         li
                             a(href='http://www.linkedin.com/shareArticle?mini=true&url='+encodeURIComponent(fullUri)+'&title='+encodeURIComponent(title), target='_blank', class='popup').linkedin
                                 i.fa.fa-linkedin
-                                | &nbsp;LinkedIn
+                                | &nbsp;&nbsp;&nbsp;LinkedIn
                         li
                             a(href='https://plus.google.com/share?url=' + encodeURIComponent(fullUri), target='_blank', class='popup').google-plus
                                 i.fa.fa-google-plus
-                                | &nbsp;Google+
+                                | &nbsp;&nbsp;&nbsp;Google+
         .row
             .col-lg-offset-2.col-lg-8
                 .comments
