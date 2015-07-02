@@ -42,6 +42,7 @@ module.exports = function(grunt) {
                 },
 				files: {
                     '<%= dirs.output %>/index.html': 'templates/index.jade',
+                    '<%= dirs.output %>/resume/index.html': 'templates/resume.jade',
                     '<%= dirs.output %>/404.html': 'templates/404.jade'
                 }
 			}
@@ -77,10 +78,10 @@ module.exports = function(grunt) {
         blog:{
             options: {
                 metadata: {
-                    name: "<%= pkg.name %>",
+                    name: "<%= pkg.site.name %>",
                     desc: "<%= pkg.description %>",
                     author: "<%= pkg.author %>",
-                    baseuri: "<%= pkg.homepage %>",
+                    baseuri: "<%= pkg.site.url %>",
                     disqus: "<%= pkg.disqus %>",
                     analytics: "<%= pkg.analytics %>",
                     moment: require('moment')
@@ -148,7 +149,7 @@ module.exports = function(grunt) {
             livereload: true
         },
         jade: {
-            files: ['templates/layout.jade', 'templates/index.jade', 'templates/404.jade', 'templates/partials/*.jade'],
+            files: ['templates/layout.jade', 'templates/index.jade', 'templates/resume.jade', 'templates/404.jade', 'templates/partials/*.jade'],
             tasks: ['jade']
         },
         sass: {

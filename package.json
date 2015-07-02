@@ -6,7 +6,10 @@
     "name": "Lorenzo Delgado",
     "email": "lorenzo.delgado@lnsd.es"
   },
-  "homepage": "http://lnsd.es",
+  "site": {
+    "name": "LNSD",
+    "url": "http://lnsd.es"
+  },
   "disqus": "LNSD",
   "analytics": "UA-48085614-2",
   "repository": {
