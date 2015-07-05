@@ -1,2 +1,283 @@
-// Resume
+//- Resume index (resume/index.html)
 extends layout
+append vars
+    - var style = 'resume';
+    - var urlbase = '/resume/';
+
+block title
+    = "Resume" + " • " + name
+
+block header
+    header.container
+        .row
+            .col-lg-offset-3.col-lg-6
+                .logo
+                .text-logo
+                    h1.text-logo LNSD
+        .row
+            .col-lg-offset-2.col-lg-8
+                nav
+                    ul
+                        li
+                            a(href="/") home
+                        li
+                            a(href="/resume").active resume
+                        li
+                            a(href="/blog") blog
+                        li
+                            a(href="/contact") contact
+
+block content
+    .timeline
+        // Header
+        header#header
+            .container
+                .row
+                    .col-sm-6.col-sm-offset-3.text-center
+                        img.face(src='../assets/lnsd-face-sm.jpg', alt='')
+                        p.header-name Lorenzo Delgado
+                        p.header-title Electronics and Telecommunications Engineer
+                        p.header-subtitle
+                            b Hello my name is Lorenzo Delgado
+                            |  and I'm a Web Designer & Web Developer from Valencia, Spain. In pharetra orci dignissim, blandit mi semper, ultricies diam. Suspendisse malesuada suscipit nunc non volutpat. Sed porta nulla id orci laoreet tempor non consequat enim.
+        // end Header
+
+        // Profile
+        section#profile.profile.activate
+            .container
+                .row
+                    .col-sm-6.col-sm-offset-4
+                        ul
+                            li.title
+                                i.fa.fa-users
+                                | Profile
+                            li
+                                span.note Full name
+                                p
+                                    strong Lorenzo Delgado Antequera
+                            li
+                                span.note Born
+                                p
+                                    strong 02 May 1992
+                                p
+                                    strong Valencia, Spain
+                            li
+                                span.note Linkedin profile
+                                p
+                                    strong
+                                        a(href='https://www.linkedin.com/in/lorenzodelgado') https://www.linkedin.com/in/lorenzodelgado
+        // end Profile
+
+        // Work experience
+        section#work-experience.work-experience
+            .container
+                .row
+                    .col-sm-6.col-sm-offset-4
+                        ul
+                            li.title
+                                i.fa.fa-briefcase
+                                | Work experience
+                            li
+                                span.note November 2013 - November 2014
+                                p
+                                    strong Formula Student UPV
+                                p
+                                    strong Electronics egineering manager
+                                    |  in Valencia, Spain
+                                p.description
+                                    | Vestibulum ut pharetra diam, vitae hendrerit sapien. Praesent porttitor augue nec semper suscipit.Nulla et cursus lectus. Praesent vel feugiat dolor.
+                            li
+                                span.note May 2014 - July 2014
+                                p
+                                    strong Wanty App
+                                p
+                                    strong Telefonica Talentum Long Track
+                                    |  in Valencia, Spain
+                                p.description
+                                    | Vestibulum ut pharetra diam, vitae hendrerit sapien. Praesent porttitor augue nec semper suscipit.Nulla et cursus lectus. Praesent vel feugiat dolor.
+                            li
+                                span.note February 2014 - April 2014
+                                p
+                                    strong GEOZATE, SL
+                                p
+                                    strong Telefonica Talentum Long Track
+                                    |  in Valencia, Spain
+                                p.description
+                                    | Vestibulum ut pharetra diam, vitae hendrerit sapien. Praesent porttitor augue nec semper suscipit.Nulla et cursus lectus. Praesent vel feugiat dolor.
+                            li
+                                span.note March 2013 - February 2014
+                                p
+                                    strong Trobi team
+                                p
+                                    strong Android developer
+                                    |  in Valencia, Spain
+                                p.description
+                                    | Donec vel nulla mollis, mattis orci vel, vulputate tellus. Cras interdum sapien quis risus mattis egestas. Etiam rhoncus lacus turpis, in vulputate arcu imperdiet non.
+        // end Work experience
+
+        // Education
+        section#education.education
+            .container
+                .row
+                    .col-sm-6.col-sm-offset-4
+                        ul
+                            li.title
+                                i.fa.fa-book
+                                | Education
+                            li
+                                span.note September 2014 - Current
+                                p
+                                    strong Masters Degree
+                                p
+                                    strong Universitat Politècnica de València
+                                    |  in Valencia, Spain
+                                p.description
+                                    | Vestibulum ut pharetra diam, vitae hendrerit sapien. Praesent porttitor augue nec semper suscipit. Nulla et cursus lectus. Praesent vel feugiat dolor.
+                            li
+                                span.note 2010 - 2014
+                                p
+                                    strong Bachelors Degree
+                                p
+                                    strong Universitat Politècnica de València
+                                    |  in Valencia, Spain
+                                p.description
+                                    | Donec vel nulla mollis, mattis orci vel, vulputate tellus. Cras interdum sapien quis risus mattis egestas. Etiam rhoncus lacus turpis, in vulputate arcu imperdiet non.
+        // end Education
+
+        // Awards
+        section#awards.awards
+           .container
+               .row
+                   .col-sm-6.col-sm-offset-4
+                       ul
+                           li.title
+                               i.fa.fa-trophy
+                               | Awards
+                           li
+                               span.note November 2014
+                               p
+                                   strong Bachelor degree thesis distiction (10 M.H.)
+                               p
+                                   strong Universitat Politècnica de València
+                                   |  in Valencia, Spain
+                               p.description
+                                   | Vestibulum ut pharetra diam, vitae hendrerit sapien. Praesent porttitor augue nec semper suscipit. Nulla et cursus lectus. Praesent vel feugiat dolor.
+                           li
+                               span.note September 2013
+                               p
+                                   strong Smilespaces - 1st place and global winner - #H4SB
+                               p
+                                   strong Campus Party Europe
+                                   |  in London, UK
+                               p.description
+                                   | Vestibulum ut pharetra diam, vitae hendrerit sapien. Praesent porttitor augue nec semper suscipit. Nulla et cursus lectus. Praesent vel feugiat dolor.
+                           li
+                               span.note February 2013
+                               p
+                                   strong Toc-Toc - Global winner. Comillas foundation - #HackForGood
+                               p
+                                   strong Universitat Politècnica de València
+                                   |  in Valencia, Spain
+                               p.description
+                                   | Vestibulum ut pharetra diam, vitae hendrerit sapien. Praesent porttitor augue nec semper suscipit. Nulla et cursus lectus. Praesent vel feugiat dolor.
+                           li
+                               span.note February 2013
+                               p
+                                   strong Toc-Toc - Comillas foundation global winner - #HackForGood
+                               p
+                                   strong Universitat Politècnica de València
+                                   |  in Valencia, Spain
+                               p.description
+                                   | Donec vel nulla mollis, mattis orci vel, vulputate tellus. Cras interdum sapien quis risus mattis egestas. Etiam rhoncus lacus turpis, in vulputate arcu imperdiet non.
+        // end Awards
+
+        // Skills
+        section#skills.skills
+            .container
+                .row
+                    .col-sm-6.col-sm-offset-4
+                        ul
+                            li.title
+                                i.fa.fa-wrench
+                                | Skills
+                            //- TODO Skills cloud
+                            //li
+                                p
+                                    | Adobe InDesign
+                                    span.annotation.pull-right 95%
+                                .progress
+                                    .progress-bar.progress-bar-success(role='progressbar', aria-valuenow='95', aria-valuemin='0', aria-valuemax='100', style='width: 95%;')
+        // end Skills
+
+        // Interests
+        section#interests.interests
+            .container
+                .row
+                    .col-sm-6.col-sm-offset-4
+                        ul
+                            li.title
+                                i.fa.fa-heart-o
+                                | Interests
+                            li
+                                p
+                                    strong Design
+                                p.description
+                                    | Vestibulum ut pharetra diam, vitae hendrerit sapien. Praesent porttitor augue nec semper suscipit. Nulla et cursus lectus. Praesent vel feugiat dolor.
+                            li
+                                p
+                                    strong Music
+                                p.description
+                                    | Donec vel nulla mollis, mattis orci vel, vulputate tellus. Cras interdum sapien quis risus mattis egestas. Etiam rhoncus lacus turpis, in vulputate arcu imperdiet non.
+                            li
+                                p
+                                    strong Mobile & web development
+                                p.description
+                                    | Maecenas velit eros, congue quis accumsan sed, consequat id magna. Pellentesque at auctor lacus.
+        // end Interests
+
+        // Contact
+        section#contact.contact
+            .container
+                .row
+                    .col-sm-6.col-sm-offset-4
+                        ul
+                            li.title
+                                i.fa.fa-envelope
+                                | Contact
+                            li.static
+                                span.note Email
+                                p
+                                    strong
+                                        a(href='mailto://lorenzo.delgado@lnsd.es') lorenzo.delgado@lnsd.es
+                                hr.empty
+                                form(action='/', method='post')
+                                    .form-group.input-group
+                                        span.input-group-addon
+                                            i.fa.fa-user
+                                        input#inputname.form-control(name='yourname', type='text', placeholder='Enter your name')
+                                    .form-group.input-group
+                                        span.input-group-addon
+                                            i.fa.fa-envelope
+                                        input#inputemail.form-control(name='email', type='email', placeholder='Enter your email')
+                                    .form-group.input-group
+                                        span.input-group-addon
+                                            i.fa.fa-bold
+                                        input#inputsubject.form-control(name='subject', type='text', placeholder='Enter subject')
+                                    .form-group.input-group
+                                        span.input-group-addon
+                                            i.fa.fa-comment
+                                        textarea#inputmessage.form-control(name='comments', rows='3', placeholder='Enter message here')
+                                    button.btn.btn-success.pull-right(type='submit')
+                                        i.fa.fa-paper-plane
+                                        |  Send message
+                            li.title.up
+                                i.fa.fa-arrow-up
+                                | Up
+        // end Contact
+
+
+
+
+append scripts
+    script(src='../js/vendor/jquery.min.js')
+    script(src='../js/main.js')

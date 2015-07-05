@@ -169,6 +169,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-sitemap');
     grunt.config('sitemap', {
         site: {
+            homepage: '<%= pkg.site.url %>',
             pattern: '<%= dirs.output %>/**/*.html',
             siteRoot: '<%= dirs.output %>'
         }

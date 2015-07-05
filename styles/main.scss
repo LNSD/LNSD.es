@@ -11,6 +11,7 @@
 @import "partials/home";
 @import "partials/404";
 @import "partials/blog";
+@import "partials/resume";
 
 html {
   min-height: 100%;
@@ -121,6 +122,11 @@ header nav {
       &::after {
         font-size: 20px;
         color: rgba(0, 0, 0, 0.15);
+      }
+
+      .active {
+        font-weight: bolder;
+        text-decoration: underline;
       }
 
       a {

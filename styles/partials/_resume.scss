@@ -1,0 +1,359 @@
+// Resume style section (resume/index.html)
+@import "../base";
+$footer-height: 55px;
+
+.resume {
+  position: relative;
+  min-height: 100%;
+
+  body {
+    font-size: 13px;
+    padding-top: 20px;
+    margin-bottom: $footer-height;
+    overflow-x: hidden;
+  }
+
+  h2 { margin-bottom: 12px; }
+  p { margin-bottom: 0; }
+
+  /* Main header --------------------------------------------- */
+
+  .logo {
+    height: 100px;
+
+    .logo-circle {
+      fill: none;
+      stroke: $lnsd-primary-light;
+      stroke-width: 15;
+    }
+    .logo-cross {
+      fill: $lnsd-primary-dark;
+      stroke: $lnsd-primary-dark;
+      stroke-width: 3;
+    }
+  }
+
+  .text-logo {
+    font-family: $body-font-family;
+    font-size: 25px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+
+  .timeline {
+
+    /* General Styles ---------------------------------------------- */
+
+    a {
+      color: #000;
+      text-decoration: none;
+      outline: none;
+      outline-offset: 0;
+      padding-bottom: 3px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      -webkit-transition: all .3s ease;
+      -moz-transition: all .3s ease;
+      transition: all .3s ease;
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: #000;
+        text-decoration: none;
+        outline: none;
+        outline-offset: 0;
+        border-bottom: 1px solid #000;
+      }
+    }
+
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+      font-family: 'Segoe UI', 'Open Sans', sans-serif;
+    }
+
+    .fa {
+      position: relative;
+      top: 1px;
+      display: inline-block;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .title {
+      font-size: larger;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding-left: 0;
+
+      &:hover {
+        padding-left: 0 !important;
+      }
+
+      .fa {
+        background-color: rgba(0, 0, 0, 0.75);
+        color: #fff;
+        left: -90px;
+        padding: 10px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
+        font-size: smaller;
+      }
+    }
+
+    hr {
+      margin-top: 10px;
+      margin-bottom: 15px;
+      border: 0;
+      border-top: 3px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .empty {
+      padding: 7px 0;
+      border: 0;
+    }
+
+    strong {
+      font-size: larger;
+      font-weight: normal;
+    }
+
+    ul {
+      padding: 10px 0 0 13px;
+      margin: 0;
+      border-left: 3px solid rgba(0, 0, 0, 0.05);
+      list-style: none;
+
+      li {
+        padding: 10px 0 10px 27px;
+        -webkit-transition: all .3s ease;
+        -moz-transition: all .3s ease;
+        transition: all .3s ease;
+
+        &:hover {
+          padding-left: 40px !important;
+        }
+
+        p {
+          padding-left: 8px;
+        }
+
+        .description {
+          opacity: .75;
+        }
+      }
+
+      .note {
+        display: inline-block;
+        margin: 0 8px;
+        opacity: .75;
+        text-transform: uppercase;
+      }
+    }
+
+    .static:hover {
+      padding-left: 27px !important;
+    }
+
+    .title {
+
+      &:before {
+        font-family: 'FontAwesome';
+        content: '\f00d';
+        margin:0 5px 0 -20px;
+        color: $lnsd-primary-light;
+      }
+
+      &:hover {
+        padding-left: 0 !important;
+      }
+    }
+
+    /* Header ------------------------------------------------- */
+
+    .face {
+      height: 200px;
+      width: 200px;
+      border-radius: 100px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .header-name {
+      background-color: #000;
+      padding: 5px 17px;
+      margin: {
+        top: 15px;
+        bottom: 8px;
+      }
+      display: inline-block;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 700;
+      text-transform: uppercase;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      border-left: 3px solid #f00;
+      border-right: 3px solid #0045ff;
+    }
+
+    .header-title {
+      text-align: center;
+      font-size: 16px;
+    }
+
+    .header-subtitle {
+      text-align: justify;
+      padding-top: 25px;
+      font-style: italic;
+      margin-bottom: 40px;
+    }
+
+    /* Profile ------------------------------------------------- */
+
+    .profile .title .fa {
+      background-color: #9300ff;
+    }
+
+    /* Work experience ------------------------------------------------- */
+
+    .work-experience .title .fa {
+      background-color: #00a7ff;
+    }
+
+    /* Education ------------------------------------------------- */
+
+    .education .title .fa {
+      background-color: #07b500;
+    }
+
+    /* Professional skills ------------------------------------------------- */
+
+    .awards .title .fa {
+      background-color: #ffa700;
+    }
+
+    /* Skills -------------------------------------------------------------- */
+
+    .skills .title .fa {
+      background-color: #00aca5;
+    }
+
+    /* Interests ------------------------------------------------- */
+
+    .interests .title .fa {
+      background-color: #f00;
+    }
+
+
+    /* Contact Form ------------------------------------------------ */
+
+    .contact {
+      .title .fa {
+        background-color: #0089ff;
+      }
+
+      ul li:hover {
+        padding-left: 27px;
+      }
+    }
+
+    form {
+      margin-left: 9px;
+    }
+
+    .contact-on {
+      position: fixed;
+      bottom: 50px;
+      background: #202020;
+      height: auto;
+      width: 100%;
+      padding-top: 35px;
+      padding-bottom: 25px;
+      z-index: 999;
+      display: none;
+    }
+
+    .form-control {
+      display: block;
+      width: 100%;
+      height: 35px;
+      padding: 6px 15px;
+      font-size: 12px;
+      color: #000;
+      background-color: rgba(255, 255, 255, 0.75);
+      background-image: none;
+      border: 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+
+      &:focus {
+        border: 0;
+        background-color: #fff;
+        color: #000;
+      }
+    }
+
+    textarea .form-control {
+      height: 85px;
+      resize: none;
+    }
+
+    .input-group-addon {
+      color: #000;
+      background-color: rgba(0, 0, 0, 0.05);
+      border: 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+    }
+
+    form .fa {
+      opacity: .25;
+    }
+
+    .btn-success {
+      font-size: 12px;
+      color: #000;
+      background-color: rgba(255, 255, 255, 0.5);
+      border-color: rgba(0, 0, 0, 0.1);
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      -webkit-transition: all .3s ease;
+      -moz-transition: all .3s ease;
+      transition: all .3s ease;
+
+      &:hover,
+      &:focus,
+      &:active,
+      .active {
+        color: #fff;
+        background-color: #0089ff;
+        border-color: rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    .btn .fa {
+      margin-right: 7px;
+      opacity: 1;
+    }
+
+    /* Up ------------------------------------------------ */
+
+    .contact .title.up .fa {
+      background-color: #07b500;
+    }
+
+    .up {
+      cursor: pointer;
+    }
+  }
+}
