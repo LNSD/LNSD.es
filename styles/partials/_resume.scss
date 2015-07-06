@@ -234,8 +234,56 @@ $footer-height: 55px;
 
     /* Skills -------------------------------------------------------------- */
 
-    .skills .title .fa {
-      background-color: #00aca5;
+    .skills {
+      .title .fa {
+        background-color: #00aca5;
+      }
+
+      .note {
+        display: block;
+        margin-bottom: 4px;
+      }
+
+      .tag {
+        display: inline-block;
+        white-space: nowrap;
+        padding: {
+          left: 4px;
+          right: 8px;
+          top: 4px;
+          bottom: 3px;
+        }
+        margin: 5px;
+        background-color: $lnsd-primary-light;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+
+        &:before {
+          text-align: center;
+          font-family: $narrow-font-family;
+          text-transform: uppercase;
+          color: white;
+          font-weight: bold;
+          padding: 4px;
+          margin-right: 5px;
+          margin-left: -8px;
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+        }
+      }
+
+      .basic:before {
+          content: 'bas';
+          background-color: #00C853;
+      }
+      .med:before {
+        content: 'med';
+        background-color: #FFC107;
+      }
+      .expert:before {
+        content: 'exp';
+        background-color: #F44336;
+      }
     }
 
     /* Interests ------------------------------------------------- */

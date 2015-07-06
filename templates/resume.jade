@@ -7,6 +7,9 @@ append vars
 block title
     = "Resume" + " • " + name
 
+append styles
+    link(href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700', rel='stylesheet', type='text/css')
+
 block header
     header.container
         .row
@@ -85,7 +88,6 @@ block content
                                         i.fa.fa-dribbble
 
         // end Profile
-
 
         // Work experience
         section#work-experience.work-experience
@@ -219,13 +221,51 @@ block content
                             li.title
                                 i.fa.fa-wrench
                                 | Skills
-                            //- TODO Skills cloud
-                            //li
-                                p
-                                    | Adobe InDesign
-                                    span.annotation.pull-right 95%
-                                .progress
-                                    .progress-bar.progress-bar-success(role='progressbar', aria-valuenow='95', aria-valuemin='0', aria-valuemax='100', style='width: 95%;')
+
+                            li.static
+                                span.note Electronics
+                                span.tag.expert HDL Design
+                                span.tag.expert HDL Verification
+                                span.tag.expert MCU Firmware development
+                                span.tag.expert Algorithm optimisation
+                                span.tag.expert Project management
+                                span.tag.med Digital Signal Processing
+                                span.tag.med PCB Design/Manufacturing
+                                span.tag.basic High frequency electronics
+
+                            li.static
+                                span.note Web backend/frontend
+                                span.tag.expert Joomla/Wordpress
+                                span.tag.med Jade lang/HTML5
+                                span.tag.med Sass/CSS3
+                                span.tag.basic CoffeeScript/Javascript
+                                span.tag.basic Node.js
+
+                            li.static
+                                span.note Engineering tools
+                                span.tag.expert Matlab
+                                span.tag.expert System-Verilog/VHDL
+                                span.tag.expert Altera Quartus II
+                                span.tag.expert Mentor Graphics Modelsim
+                                span.tag.expert Git/Github
+                                span.tag.expert C/C++
+                                span.tag.expert IntelliJ IDEA
+                                span.tag.med Java
+                                span.tag.med Altium Designer
+                                span.tag.med Cadsoft Eagle
+                                span.tag.med ARM Microcontrollers
+                                span.tag.med AVR/Arduino
+                                span.tag.basic 3DS Solidworks
+                                span.tag.basic NI LabView
+                                span.tag.basic C#
+                                span.tag.basic Visual Studio
+
+                            li.static
+                                span.note Miscellaneous
+                                span.tag.med Android Development
+                                span.tag.basic Adobe Photoshop
+                                span.tag.basic Adobe Illustrator
+
         // end Skills
 
         // Interests
@@ -293,9 +333,6 @@ block content
                                 i.fa.fa-arrow-up
                                 | Up
         // end Contact
-
-
-
 
 append scripts
     script(src='../js/vendor/jquery.min.js')
