@@ -8,7 +8,6 @@ $footer-height: 55px;
 
   body {
     font-size: 13px;
-    padding-top: 20px;
     margin-bottom: $footer-height;
     overflow-x: hidden;
   }
@@ -94,9 +93,7 @@ $footer-height: 55px;
         color: #fff;
         left: -90px;
         padding: 10px;
-        -webkit-border-radius: 20px;
-        -moz-border-radius: 20px;
-        border-radius: 20px;
+        border-radius: 50%;
         font-size: smaller;
       }
     }
@@ -247,7 +244,6 @@ $footer-height: 55px;
       background-color: #f00;
     }
 
-
     /* Contact Form ------------------------------------------------ */
 
     .contact {
@@ -355,6 +351,54 @@ $footer-height: 55px;
 
     .up {
       cursor: pointer;
+    }
+
+    /* Social ----------------------------------------------*/
+    .social {
+      margin: 10px 5px;
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      padding: 10px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 18px;
+      border: 1px solid $lnsd-primary-light;
+
+      &:hover,
+      &:focus {
+        border: none;
+        color: white;
+      }
+    }
+
+    .facebook:hover,
+    .facebook:focus {
+      background-color: $facebook-color;
+    }
+    .twitter:hover,
+    .twitter:focus {
+      background-color: $twitter-color;
+    }
+    .googleplus:hover,
+    .googleplus:focus {
+      background-color: $googleplus-color;
+    }
+    .instagram:hover,
+    .instagram:focus {
+      background-color: $instagram-blue-color;
+    }
+    .github:hover,
+    .github:focus {
+      background-color: $github-color;
+    }
+    .dribbble:hover,
+    .dribbble:focus {
+      background-color: $dribbble-color;
+    }
+    .linkedin:hover,
+    .linkedin:focus {
+      background-color: $linkedin-color;
     }
   }
 }

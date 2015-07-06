@@ -141,7 +141,7 @@ $footer-height: 55px;
           &:focus {
             color: white;
             font-weight: 400;
-            background-color: #3B5998;
+            background-color: $facebook-color;
           }
         }
         .twitter {
@@ -149,7 +149,7 @@ $footer-height: 55px;
           &:focus {
             color: white;
             font-weight: 400;
-            background-color: #55ACEE;
+            background-color: $twitter-color;
           }
         }
         .google-plus {
@@ -157,7 +157,7 @@ $footer-height: 55px;
           &:focus {
             color: white;
             font-weight: 400;
-            background-color: #D34836;
+            background-color: $googleplus-color;
           }
         }
         .linkedin {
@@ -165,7 +165,7 @@ $footer-height: 55px;
           &:focus {
             color: white;
             font-weight: 400;
-            background-color: #007BB6;
+            background-color: $linkedin-color;
           }
         }
       }
