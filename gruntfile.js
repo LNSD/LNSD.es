@@ -37,7 +37,8 @@ module.exports = function(grunt) {
                     data: {
                         name: "<%= pkg.name %>",
                         desc: "<%= pkg.description %>",
-                        author: "<%= pkg.author %>"
+                        author: "<%= pkg.author %>",
+                        moment: require('moment')
                     }
                 },
 				files: {

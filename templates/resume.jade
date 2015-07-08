@@ -11,24 +11,8 @@ append styles
     link(href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700', rel='stylesheet', type='text/css')
 
 block header
-    header.container
-        .row
-            .col-lg-offset-3.col-lg-6
-                .logo
-                .text-logo
-                    h1.text-logo LNSD
-        .row
-            .col-lg-offset-2.col-lg-8
-                nav
-                    ul
-                        li
-                            a(href="/") home
-                        li
-                            a(href="/resume").active resume
-                        li
-                            a(href="/blog") blog
-                        li
-                            a(href="/contact") contact
+    include partials/page_header
+    +page_header('resume')
 
 block content
     .timeline

@@ -11,6 +11,7 @@ $bg-img-lg: "../assets/lnsd-antenna-bg-lg.jpg";
 
   body {
     height: 100%;
+    margin: 0;
     background-color: $lnsd-primary-dark;
 
     @include cover-bg($bg-img-lg, $position: center, $size: cover);

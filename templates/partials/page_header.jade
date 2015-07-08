@@ -1,0 +1,19 @@
+//- Page header mixin-partial
+mixin page_header(active)
+    - var nav = [{"name":"home", "url":"/"},{"name":"resume", "url":"/resume"},{"name":"blog", "url":"/blog"}]
+    header.container
+        .row
+            .col-lg-offset-3.col-lg-6
+                .logo
+                .text-logo
+                    h1.text-logo LNSD
+        .row
+            .col-lg-offset-2.col-lg-8
+                nav
+                    ul
+                        each item in nav
+                            li
+                                if(active === item.name)
+                                    a(href=item.url).active!=item.name
+                                else
+                                    a(href=item.url)!=item.name

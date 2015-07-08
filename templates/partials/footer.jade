@@ -1,0 +1,10 @@
+//- Page footer partial
+footer.footer.container.font-light
+    //- TODO Footer content
+    .row
+        .col-lg-offset-2.col-lg-8
+            hr
+    .row
+        .col-lg-offset-2.col-lg-8
+            .content
+                p.text-center!= moment(Date.now()).format('YYYY') + '&nbsp;&copy;&nbsp;' + author.name

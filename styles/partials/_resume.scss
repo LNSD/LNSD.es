@@ -1,6 +1,5 @@
 // Resume style section (resume/index.html)
 @import "../base";
-$footer-height: 55px;
 
 .resume {
   position: relative;
@@ -8,7 +7,6 @@ $footer-height: 55px;
 
   body {
     font-size: 13px;
-    margin-bottom: $footer-height;
     overflow-x: hidden;
   }
 
@@ -41,7 +39,6 @@ $footer-height: 55px;
   }
 
   .timeline {
-
     /* General Styles ---------------------------------------------- */
 
     a {

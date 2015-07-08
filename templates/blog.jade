@@ -11,24 +11,8 @@ block title
     = "Blog" + " • " + name
 
 block header
-    header.container
-        .row
-            .col-lg-offset-3.col-lg-6
-                .logo
-                .text-logo
-                    h1.text-logo LNSD
-        .row
-            .col-lg-offset-2.col-lg-8
-                nav
-                    ul
-                        li
-                            a(href="/") home
-                        li
-                            a(href="/resume") resume
-                        li
-                            a(href="/blog").active blog
-                        li
-                            a(href="/contact") contact
+    include partials/page_header
+    +page_header('blog')
 
 block content
     section.container
@@ -64,23 +48,7 @@ block content
                             i.fa.fa-angle-double-right
 
 block footer
-    footer.footer.container.font-light
-        //- TODO Footer content
-        .row
-            .col-lg-offset-2.col-lg-8
-                hr
-        //.row
-            .col-lg-offset-2.col-lg-4
-                .content
-                    p.text-center Footer content left
-            .col-lg-4
-                .content
-                    p.text-center Footer content right
-        .row
-            .col-lg-offset-2.col-lg-8
-                .content
-                    p.text-center!= moment(Date.now()).format('YYYY')+'&nbsp;&copy;&nbsp;'+author.name
-
+    include partials/footer
 
 append scripts
     script(src='../js/vendor/jquery.min.js')
